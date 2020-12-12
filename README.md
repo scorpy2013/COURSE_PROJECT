@@ -63,11 +63,11 @@
 ### Описание работы
 
 Ознакомиться с алгоритмами работы программ и их результатами Вы можете по ссылке:
-![Презентация](https://github.com/scorpy2013/COURSE_PROJECT/blob/mycode/%D0%A0%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%B4%D0%B0.png)
+![Презентация](https://slides.com)
 
 ### Реализация кода
 
-[Реализация консольного приложения в Clion](https://slides.com)
+[Реализация консольного приложения в Clion](https://github.com/scorpy2013/COURSE_PROJECT/blob/mycode/%D0%A0%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%B4%D0%B0.png)
 
 ### Вывод
 
