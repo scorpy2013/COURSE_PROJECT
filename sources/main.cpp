@@ -1,0 +1,234 @@
+#include "Cesar_Cipher.h"
+#include "Cesar_AnaLysis.h"
+#include "Gamma_Cipher.h"
+#include "Gamma_Analysis.h"
+#include "Vernam_Cipher.h"
+#include "Vernam_Analysis.h"
+#include "RSA_Cipher.h"
+#include "RSA_Analysis.h"
+#include "DES_Cipher.h"
+#include "DES_Analysis.h"
+#include "AES_Cipher.h"
+#include "AES_Analysis.h"
+#include "BlowFish_Cipher.h"
+#include "BlowFish_Analysis.h"
+
+int main() {
+    int button = 0;
+    cout << "+------------------------------------------------------------------------------------------+" << endl;
+    cout << "|                         WELCOME TO MY SMALL WORLD OF CRYPTOGRAPHY                        |" << endl;
+    cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
+    cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
+    cout << "|                                  CRYPTOANALYSIS SYSTEM                                   |" << endl;
+    cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
+    cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" << endl;
+    while (button != 15) {
+        cout << endl << "|------------------------------------------------------------------------------------------|"
+             << endl;
+        cout << "|                                     CONSOLE MENU                                         |" << endl;
+        cout << "|------------------------------------------------------------------------------------------|" << endl;
+        cout << "|----->                        (1)Cesar cipher;                                      <-----|" << endl;
+        cout << "|----->                        (2)Cryptoanalysis of Cesar cipher;                    <-----|" << endl;
+        cout << "|----->                        (3)Gamming cipher;                                    <-----|" << endl;
+        cout << "|----->                        (4)Cryptoanalysis of Gamming cipher;                  <-----|" << endl;
+        cout << "|----->                        (5)Vernam cipher;                                     <-----|" << endl;
+        cout << "|----->                        (6)Cryptoanalysis of Vernam cipher;                   <-----|" << endl;
+        cout << "|----->                        (7)AES cipher;                                        <-----|" << endl;
+        cout << "|----->                        (8)Cryptoanalysis of AES cipher;                      <-----|" << endl;
+        cout << "|----->                        (9)DES cipher;                                        <-----|" << endl;
+        cout << "|----->                        (10)Cryptoanalysis of DES cipher;                     <-----|" << endl;
+        cout << "|----->                        (11)RSA cipher;                                       <-----|" << endl;
+        cout << "|----->                        (12)Cryptoanalysis of RSA cipher;                     <-----|" << endl;
+        cout << "|----->                        (13)BlowFish cipher;                                  <-----|" << endl;
+        cout << "|----->                        (14)Cryptoanalysis of BlowFish cipher;                <-----|" << endl;
+        cout << "|----->                        (15)Quit.                                             <-----|" << endl;
+        cout << "|------------------------------------------------------------------------------------------|" << endl;
+        cout << "                                   ENTER A COMMAND--->";
+        cin >> button;
+        cout << "===========================================================================================" << endl;
+        switch (button) {
+            case 1:
+                cout << "                                      CESAR CIPHER" << endl;
+                try {
+                    Cesar_Cipher();
+                }
+                catch (const char *str) {
+                    cout << str << endl;
+                }
+                break;
+            case 2:
+                cout << "                             CRYPTOANALYSIS OF CESAR CIPHER" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                           THE METHOD OF COMPLETE ENUMERATION" << endl;
+                cout << "-------------------------------------------------------------------------------------------"
+                     << endl;
+                try {
+                    Cesar_Analysis();
+                }
+                catch (const char *str) {
+                    cout << str << endl;
+                }
+                break;
+            case 3:
+                cout << "                                     GAMMING CIPHER" << endl;
+                try {
+                    Gamma_Cipher();
+                }
+                catch (const char *str) {
+                    cout << str << endl;
+                }
+                break;
+            case 4:
+                cout << "                            CRYPTOANALYSIS OF GAMMING CIPHER" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                           THE METHOD OF COMPLETE ENUMERATION" << endl;
+                cout << "-------------------------------------------------------------------------------------------"
+                     << endl;
+                try {
+                    Gamma_Analysis();
+                }
+                catch (const char *str) {
+                    cout << str << endl;
+                }
+                break;
+            case 5:
+                cout << "                                     VERNAM CIPHER" << endl;
+                try {
+                    Vernam_Cipher();
+                }
+                catch (const char *str) {
+                    cout << str << endl;
+                }
+                break;
+            case 6:
+                cout << "                            CRYPTOANALYSIS OF VERNAM CIPHER" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                           THE METHOD OF COMPLETE ENUMERATION" << endl;
+                cout << "-------------------------------------------------------------------------------------------"
+                     << endl;
+                try {
+                    Vernam_Analysis();
+                }
+                catch (const char *str) {
+                    cout << str << endl;
+                }
+                break;
+            case 7:
+                cout << "                                      AES CIPHER" << endl;
+                try {
+                    AES_Cipher();
+                }
+                catch (const char *str) {
+                    cout << str << endl;
+                }
+                break;
+            case 8:
+                cout << "                            CRYPTOANALYSIS OF AES CIPHER" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                           THE METHOD OF COMPLETE ENUMERATION" << endl;
+                cout << "-------------------------------------------------------------------------------------------"
+                     << endl;
+                try {
+                    AES_Analysis();
+                }
+                catch (const char *str) {
+                    cout << str << endl;
+                }
+                break;
+            case 9:
+                cout << "                                      DES CIPHER" << endl;
+                try {
+                    DES_Cipher();
+                }
+                catch (const char *str) {
+                    cout << str << endl;
+                }
+                break;
+            case 10:
+                cout << "                            CRYPTOANALYSIS OF DES CIPHER" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                           THE METHOD OF COMPLETE ENUMERATION" << endl;
+                cout << "-------------------------------------------------------------------------------------------"
+                     << endl;
+                try {
+                    DES_Analysis();
+                }
+                catch (const char *str) {
+                    cout << str << endl;
+                }
+                break;
+            case 11:
+                cout << "                                 RSA CIPHER" << endl;
+                try {
+                    RSA_Cipher();
+                }
+                catch (const char *str) {
+                    cout << str << endl;
+                }
+                break;
+            case 12:
+                cout << "                              CRYPTOANALYSIS OF RSA CIPHER" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                           THE METHOD OF COMPLETE ENUMERATION" << endl;
+                cout << "-------------------------------------------------------------------------------------------"
+                     << endl;
+                try {
+                    RSA_Analysis();
+                }
+                catch (const char *str) {
+                    cout << str << endl;
+                }
+                break;
+            case 13:
+                cout << "                                   BLOWFISH CIPHER" << endl;
+                try {
+                    BlowFish_Cipher();
+                }
+                catch (const char *str) {
+                    cout << str << endl;
+                }
+                break;
+            case 14:
+                cout << "                        CRYPTOANALYSIS OF BLOWFISH CIPHER" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                                           ||" << endl;
+                cout << "                        THE METHOD OF COMPLETE ENUMERATION" << endl;
+                cout << "-------------------------------------------------------------------------------------------"
+                     << endl;
+                try {
+                    BlowFish_Analysis();
+                }
+                catch (const char *str) {
+                    cout << str << endl;
+                }
+                break;
+            case 15:
+                break;
+            default:
+                cout << endl << "WRONG COMMAND! PLEASE, TRY AGAIN!" << endl << endl;
+        }
+    }
+    return 0;
+}
+
+

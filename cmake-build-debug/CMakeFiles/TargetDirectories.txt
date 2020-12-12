@@ -1,0 +1,5 @@
+/home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/cmake-build-debug/CMakeFiles/template.dir
+/home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/cmake-build-debug/CMakeFiles/test.dir
+/home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/cmake-build-debug/CMakeFiles/tests.dir
+/home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/cmake-build-debug/CMakeFiles/edit_cache.dir
