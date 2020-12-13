@@ -18,7 +18,7 @@ void Vernam_Analysis() {
     double start_time, end_time, search_time; // считаем время взлома
     int L; // длина нашего ключа
     string str, str1, gamma, GAMMA, rez;
-    int kol;
+    int kol=1;
     char const *pCharset = "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
     size_t const CharsetSize = strlen(pCharset);
     cout << "Please enter an encrypted string: ";

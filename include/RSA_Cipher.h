@@ -15,7 +15,8 @@
 using namespace std;
 
 int random_simple(const int &n) {
-    int *a = new int[n], i, j, k, simple;
+    int *a = new int[n];
+    int i, j, k, simple=0;
     memset(a, 0, sizeof(int) * n);
     for (i = 1; 3 * i + 1 < n; i++) {
         for (j = 1; (k = i + j + 2 * i * j) < n && j <= i; j++)

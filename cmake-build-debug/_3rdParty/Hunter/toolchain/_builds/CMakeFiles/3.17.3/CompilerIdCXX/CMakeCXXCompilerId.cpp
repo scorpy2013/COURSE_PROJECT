@@ -1,4 +1,3 @@
-//Copyright [2020] <Copyright scorpy2013>
 /* This source file must have a .cpp extension so that all C++ compilers
    recognize the extension without flags.  Borland does not know .cxx for
    example.  */
@@ -266,8 +265,7 @@
 #  define COMPILER_VERSION_TWEAK DEC(_MSC_BUILD)
 # endif
 
-#elif defined(__VISUALDSPVERSION__) || defined(__ADSPBLACKFIN__) || defined(__A
-DSPTS__) || defined(__ADSP21000__)
+#elif defined(__VISUALDSPVERSION__) || defined(__ADSPBLACKFIN__) || defined(__ADSPTS__) || defined(__ADSP21000__)
 # define COMPILER_ID "ADSP"
 #if defined(__VISUALDSPVERSION__)
   /* __VISUALDSPVERSION__ = 0xVVRRPP00 */
@@ -283,9 +281,7 @@ DSPTS__) || defined(__ADSP21000__)
 #  define COMPILER_VERSION_MINOR DEC(((__VER__) / 1000) % 1000)
 #  define COMPILER_VERSION_PATCH DEC((__VER__) % 1000)
 #  define COMPILER_VERSION_INTERNAL DEC(__IAR_SYSTEMS_ICC__)
-# elif defined(__VER__) && (defined(__ICCAVR__) || defined(__ICCRX__) || define
-d(__ICCRH850__) || defined(__ICCRL78__) || defined(__ICC430__) || defined(__ICC
-RISCV__) || defined(__ICCV850__) || defined(__ICC8051__))
+# elif defined(__VER__) && (defined(__ICCAVR__) || defined(__ICCRX__) || defined(__ICCRH850__) || defined(__ICCRL78__) || defined(__ICC430__) || defined(__ICCRISCV__) || defined(__ICCV850__) || defined(__ICC8051__))
 #  define COMPILER_VERSION_MAJOR DEC((__VER__) / 100)
 #  define COMPILER_VERSION_MINOR DEC((__VER__) - (((__VER__) / 100)*100))
 #  define COMPILER_VERSION_PATCH DEC(__SUBVERSION__)
@@ -351,8 +347,7 @@ char const *info_cray = "INFO" ":" "compiler_wrapper[CrayPrgEnv]";
 #elif defined(__sun) || defined(sun)
 # define PLATFORM_ID "SunOS"
 
-#elif defined(_AIX) || defined(__AIX) || defined(__AIX__) || defined(__aix) ||
-defined(__aix__)
+#elif defined(_AIX) || defined(__AIX) || defined(__AIX__) || defined(__aix) || defined(__aix__)
 # define PLATFORM_ID "AIX"
 
 #elif defined(__hpux) || defined(__hpux__)
@@ -555,35 +550,35 @@ defined(__aix__)
 /* Construct a string literal encoding the version number components. */
 #ifdef COMPILER_VERSION_MAJOR
 char const info_version[] = {
-        'I' , 'N' , 'F' , 'O' , ':' , 'c' , 'o' , 'm' , 'p' , 'i' , 'l' ,
-        'e' , 'r' , '_' , 'v' , 'e' , 'r' , 's' , 'i' , 'o' , 'n' , '[' ,
-        COMPILER_VERSION_MAJOR,
+  'I', 'N', 'F', 'O', ':',
+  'c','o','m','p','i','l','e','r','_','v','e','r','s','i','o','n','[',
+  COMPILER_VERSION_MAJOR,
 # ifdef COMPILER_VERSION_MINOR
-        '.', COMPILER_VERSION_MINOR,
+  '.', COMPILER_VERSION_MINOR,
 #  ifdef COMPILER_VERSION_PATCH
-        '.', COMPILER_VERSION_PATCH,
+   '.', COMPILER_VERSION_PATCH,
 #   ifdef COMPILER_VERSION_TWEAK
-        '.', COMPILER_VERSION_TWEAK,
+    '.', COMPILER_VERSION_TWEAK,
 #   endif
 #  endif
 # endif
-        ']', '\0'};
+  ']','\0'};
 #endif
 
 /* Construct a string literal encoding the internal version number. */
 #ifdef COMPILER_VERSION_INTERNAL
 char const info_version_internal[] = {
-  'I' , 'N' , 'F' , 'O' , ':' , 'c' , 'o' , 'm' , 'p' , 'i' , 'l' , 'e' , 'r' ,
-  '_' , 'v' , 'e' , 'r' , 's' , 'i' , 'o' , 'n' , '_' , 'i' , 'n' , 't' , 'e' ,
-  'r' , 'n' , 'a' , 'l' , '[' ,
-  COMPILER_VERSION_INTERNAL , ']' , '\0'};
+  'I', 'N', 'F', 'O', ':',
+  'c','o','m','p','i','l','e','r','_','v','e','r','s','i','o','n','_',
+  'i','n','t','e','r','n','a','l','[',
+  COMPILER_VERSION_INTERNAL,']','\0'};
 #endif
 
 /* Construct a string literal encoding the version number components. */
 #ifdef SIMULATE_VERSION_MAJOR
 char const info_simulate_version[] = {
-  'I' , 'N' , 'F' , 'O' , ':' , 's' , 'i' , 'm' , 'u' , 'l' , 'a' , 't' , 'e' ,
-  '_' , 'v' , 'e' , 'r' , 's' , 'i' , 'o' , 'n' , '[' ,
+  'I', 'N', 'F', 'O', ':',
+  's','i','m','u','l','a','t','e','_','v','e','r','s','i','o','n','[',
   SIMULATE_VERSION_MAJOR,
 # ifdef SIMULATE_VERSION_MINOR
   '.', SIMULATE_VERSION_MINOR,
@@ -594,15 +589,17 @@ char const info_simulate_version[] = {
 #   endif
 #  endif
 # endif
-  ']' , '\0'};
+  ']','\0'};
 #endif
 
 /* Construct the string literal in pieces to prevent the source from
    getting matched.  Store it in a pointer rather than an array
    because some compilers will just produce instructions to fill the
    array rather than assigning a pointer to a static array.  */
-char const *info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";
-char const *info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";
+char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";
+char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";
+
+
 
 
 #if defined(__INTEL_COMPILER) && defined(_MSVC_LANG) && _MSVC_LANG < 201403L
@@ -621,42 +618,43 @@ char const *info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";
 #  define CXX_STD __cplusplus
 #endif
 
-const char *info_language_dialect_default = "INFO" ":" "dialect_default["
-                                            #if CXX_STD > 201703L
-                                            "20"
-                                            #elif CXX_STD >= 201703L
-                                            "17"
-                                            #elif CXX_STD >= 201402L
-                                            "14"
+const char* info_language_dialect_default = "INFO" ":" "dialect_default["
+#if CXX_STD > 201703L
+  "20"
+#elif CXX_STD >= 201703L
+  "17"
+#elif CXX_STD >= 201402L
+  "14"
 #elif CXX_STD >= 201103L
   "11"
 #else
   "98"
-                                            #endif
-                                            "]";
+#endif
+"]";
 
 /*--------------------------------------------------------------------------*/
 
-int main(int argc, char *argv[]) {
-    int require = 0;
-    require += info_compiler[argc];
-    require += info_platform[argc];
+int main(int argc, char* argv[])
+{
+  int require = 0;
+  require += info_compiler[argc];
+  require += info_platform[argc];
 #ifdef COMPILER_VERSION_MAJOR
-    require += info_version[argc];
+  require += info_version[argc];
 #endif
 #ifdef COMPILER_VERSION_INTERNAL
-    require += info_version_internal[argc];
+  require += info_version_internal[argc];
 #endif
 #ifdef SIMULATE_ID
-    require += info_simulate[argc];
+  require += info_simulate[argc];
 #endif
 #ifdef SIMULATE_VERSION_MAJOR
-    require += info_simulate_version[argc];
+  require += info_simulate_version[argc];
 #endif
 #if defined(__CRAYXE) || defined(__CRAYXC)
-    require += info_cray[argc];
+  require += info_cray[argc];
 #endif
-    require += info_language_dialect_default[argc];
-    (void) argv;
-    return require;
+  require += info_language_dialect_default[argc];
+  (void)argv;
+  return require;
 }

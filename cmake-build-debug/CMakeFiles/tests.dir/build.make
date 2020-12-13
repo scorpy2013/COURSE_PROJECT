@@ -77,27 +77,27 @@ include CMakeFiles/tests.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/tests.dir/flags.make
 
-CMakeFiles/tests.dir/tests/test.cpp.o: CMakeFiles/tests.dir/flags.make
-CMakeFiles/tests.dir/tests/test.cpp.o: ../tests/test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tests.dir/tests/test.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tests.dir/tests/test.cpp.o -c /home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/tests/test.cpp
+CMakeFiles/tests.dir/sources/main.cpp.o: CMakeFiles/tests.dir/flags.make
+CMakeFiles/tests.dir/sources/main.cpp.o: ../sources/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tests.dir/sources/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/tests.dir/sources/main.cpp.o -c /home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/main.cpp
 
-CMakeFiles/tests.dir/tests/test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tests.dir/tests/test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/tests/test.cpp > CMakeFiles/tests.dir/tests/test.cpp.i
+CMakeFiles/tests.dir/sources/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tests.dir/sources/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/main.cpp > CMakeFiles/tests.dir/sources/main.cpp.i
 
-CMakeFiles/tests.dir/tests/test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tests.dir/tests/test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/tests/test.cpp -o CMakeFiles/tests.dir/tests/test.cpp.s
+CMakeFiles/tests.dir/sources/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tests.dir/sources/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/main.cpp -o CMakeFiles/tests.dir/sources/main.cpp.s
 
 # Object files for target tests
 tests_OBJECTS = \
-"CMakeFiles/tests.dir/tests/test.cpp.o"
+"CMakeFiles/tests.dir/sources/main.cpp.o"
 
 # External object files for target tests
 tests_EXTERNAL_OBJECTS =
 
-tests: CMakeFiles/tests.dir/tests/test.cpp.o
+tests: CMakeFiles/tests.dir/sources/main.cpp.o
 tests: CMakeFiles/tests.dir/build.make
 tests: /home/alexscorpy/.hunter/_Base/9a3594a/9b2c9d4/48401e9/Install/lib/libgtest_maind.a
 tests: libtemplated.a
