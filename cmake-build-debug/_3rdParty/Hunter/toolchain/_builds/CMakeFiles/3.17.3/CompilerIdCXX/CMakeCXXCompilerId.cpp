@@ -1,3 +1,4 @@
+// Copyright [2020] <Copyright scorpy2013>
 /* This source file must have a .cpp extension so that all C++ compilers
    recognize the extension without flags.  Borland does not know .cxx for
    example.  */
@@ -350,7 +351,8 @@ char const *info_cray = "INFO" ":" "compiler_wrapper[CrayPrgEnv]";
 #elif defined(__sun) || defined(sun)
 # define PLATFORM_ID "SunOS"
 
-#elif defined(_AIX) || defined(__AIX) || defined(__AIX__) || defined(__aix) || defined(__aix__)
+#elif defined(_AIX) || defined(__AIX) || defined(__AIX__) || defined(__aix) ||
+defined(__aix__)
 # define PLATFORM_ID "AIX"
 
 #elif defined(__hpux) || defined(__hpux__)
