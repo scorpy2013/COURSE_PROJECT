@@ -134,7 +134,8 @@ TEST(AESCipher, Test2) {
 
 TEST(AESCipher, Test3) {
     string text;
-    string encrypted_text = "\x9F" "f\x84\xF0" "0\xC4\xD3=\rG\v\x9F\xF2v\x1Dn";
+    string encrypted_text = "\x9F" "f\x84\xF0" "0\xC4\xD3=\rG\v\x9F\xF2v\x1Dn"
+            ;
     string decrypted_text = "This_programm_ca";
     uint8_t encrypted[BUFF_SIZE] = {0};
     uint8_t decrypted[BUFF_SIZE] = {0};
@@ -349,8 +350,7 @@ TEST(BlowFish, Test2) {
 
 TEST(BlowFish, Test3) {
     string text;
-    string encrypted_text = "\xB1N\xE5\x90\x5\x91\xA5\\\x1D" "1\x89+z\xC4\xDBi"
-                                                             "";
+    string encrypted_text = "\xB1N\xE5\x90\x5\x91\xA5\\\x1D" "1\x89+z\xC4\xDBi";
     string decrypted_text = "This_programm_ca";
     uint8_t encrypted[BUFF_SIZE] = {0};
     uint8_t decrypted[BUFF_SIZE] = {0};
