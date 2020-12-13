@@ -594,7 +594,7 @@ char const info_simulate_version[] = {
 #   endif
 #  endif
 # endif
-  ']','\0'};
+  ']' , '\0'};
 #endif
 
 /* Construct the string literal in pieces to prevent the source from
