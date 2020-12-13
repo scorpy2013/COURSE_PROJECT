@@ -90,8 +90,8 @@ TEST(AESCipher, Test1) {
     uint8_t encrypted[BUFF_SIZE] = {0};
     uint8_t decrypted[BUFF_SIZE] = {0};
     uint8_t buffer[BUFF_SIZE] = "I_WANT_TO_BE_A_PROGRAMMIST_IN_GOOGLE.";
-    uint8_t key[KEY_SIZE] = "Key_is_128_bits";
-    size_t length = KEY_SIZE;
+    uint8_t key[16] = "Key_is_128_bits";
+    size_t length = 1;
     size_t length1 = 16;
     size_t length2 = 16;
     length = AES(encrypted, 'E', key, KEY_SIZE, buffer, length);
@@ -115,21 +115,21 @@ TEST(AESCipher, Test2) {
     uint8_t encrypted[BUFF_SIZE] = {0};
     uint8_t decrypted[BUFF_SIZE] = {0};
     uint8_t buffer[BUFF_SIZE] = "Computers_change_our_life.";
-    uint8_t key[KEY_SIZE] = "Key_is_128_bits";
-    size_t length = KEY_SIZE;
+    uint8_t key[16] = "Key_is_128_bits";
+    size_t length = 1;
     size_t length1 = 16;
     size_t length2 = 16;
     length = AES(encrypted, 'E', key, KEY_SIZE, buffer, length);
-//    for (size_t i = 0; i < length; i++)
-//        text.push_back(encrypted[i]);
+    for (size_t i = 0; i < length; i++)
+        text.push_back(encrypted[i]);
     ASSERT_EQ(length, length1);
-//    ASSERT_EQ(text, encrypted_text);
+    ASSERT_EQ(text, encrypted_text);
     text = "";
     length = AES(decrypted, 'D', key, KEY_SIZE, encrypted, length);
-//    for (size_t i = 0; i < length; i++)
-//        text.push_back(decrypted[i]);
+    for (size_t i = 0; i < length; i++)
+        text.push_back(decrypted[i]);
     ASSERT_EQ(length, length2);
-//    ASSERT_EQ(text, decrypted_text);
+    ASSERT_EQ(text, decrypted_text);
 }
 
 TEST(AESCipher, Test3) {
@@ -139,21 +139,21 @@ TEST(AESCipher, Test3) {
     uint8_t encrypted[BUFF_SIZE] = {0};
     uint8_t decrypted[BUFF_SIZE] = {0};
     uint8_t buffer[BUFF_SIZE] = "This_programm_can_huck_your_computer.";
-    uint8_t key[KEY_SIZE] = "Key_is_128_bits";
-    size_t length = KEY_SIZE;
+    uint8_t key[16] = "Key_is_128_bits";
+    size_t length = 1;
     size_t length1 = 16;
     size_t length2 = 16;
     length = AES(encrypted, 'E', key, KEY_SIZE, buffer, length);
-//    for (size_t i = 0; i < length; i++)
-//        text.push_back(encrypted[i]);
+    for (size_t i = 0; i < length; i++)
+        text.push_back(encrypted[i]);
     ASSERT_EQ(length, length1);
-//    ASSERT_EQ(text, encrypted_text);
+    ASSERT_EQ(text, encrypted_text);
     text = "";
     length = AES(decrypted, 'D', key, KEY_SIZE, encrypted, length);
-//    for (size_t i = 0; i < length; i++)
-//        text.push_back(decrypted[i]);
+    for (size_t i = 0; i < length; i++)
+        text.push_back(decrypted[i]);
     ASSERT_EQ(length, length2);
-//    ASSERT_EQ(text, decrypted_text);
+    ASSERT_EQ(text, decrypted_text);
 }
 
 TEST(AESCipher, Test4) {
@@ -163,21 +163,21 @@ TEST(AESCipher, Test4) {
     uint8_t encrypted[BUFF_SIZE] = {0};
     uint8_t decrypted[BUFF_SIZE] = {0};
     uint8_t buffer[BUFF_SIZE] = "Programmist-is_a_highly-paid_job.";
-    uint8_t key[KEY_SIZE] = "Key_is_128_bits";
-    size_t length = KEY_SIZE;
+    uint8_t key[16] = "Key_is_128_bits";
+    size_t length = 1;
     size_t length1 = 16;
     size_t length2 = 16;
     length = AES(encrypted, 'E', key, KEY_SIZE, buffer, length);
-//    for (size_t i = 0; i < length; i++)
-//        text.push_back(encrypted[i]);
+    for (size_t i = 0; i < length; i++)
+        text.push_back(encrypted[i]);
     ASSERT_EQ(length, length1);
-//    ASSERT_EQ(text, encrypted_text);
+    ASSERT_EQ(text, encrypted_text);
     text = "";
     length = AES(decrypted, 'D', key, KEY_SIZE, encrypted, length);
-//    for (size_t i = 0; i < length; i++)
-//        text.push_back(decrypted[i]);
+    for (size_t i = 0; i < length; i++)
+        text.push_back(decrypted[i]);
     ASSERT_EQ(length, length2);
-//    ASSERT_EQ(text, decrypted_text);
+    ASSERT_EQ(text, decrypted_text);
 }
 
 TEST(DESCipher, Test1) {
