@@ -174,6 +174,7 @@ sources/main.o: sources/main.cpp.o
 # target to build an object file
 sources/main.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/template.dir/build.make CMakeFiles/template.dir/sources/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/sources/main.cpp.o
 .PHONY : sources/main.cpp.o
 
 sources/main.i: sources/main.cpp.i
@@ -183,6 +184,7 @@ sources/main.i: sources/main.cpp.i
 # target to preprocess a source file
 sources/main.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/template.dir/build.make CMakeFiles/template.dir/sources/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/sources/main.cpp.i
 .PHONY : sources/main.cpp.i
 
 sources/main.s: sources/main.cpp.s
@@ -192,34 +194,8 @@ sources/main.s: sources/main.cpp.s
 # target to generate assembly for a file
 sources/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/template.dir/build.make CMakeFiles/template.dir/sources/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/sources/main.cpp.s
 .PHONY : sources/main.cpp.s
-
-tests/test.o: tests/test.cpp.o
-
-.PHONY : tests/test.o
-
-# target to build an object file
-tests/test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/tests/test.cpp.o
-.PHONY : tests/test.cpp.o
-
-tests/test.i: tests/test.cpp.i
-
-.PHONY : tests/test.i
-
-# target to preprocess a source file
-tests/test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/tests/test.cpp.i
-.PHONY : tests/test.cpp.i
-
-tests/test.s: tests/test.cpp.s
-
-.PHONY : tests/test.s
-
-# target to generate assembly for a file
-tests/test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/tests/test.cpp.s
-.PHONY : tests/test.cpp.s
 
 # Help Target
 help:
@@ -235,9 +211,6 @@ help:
 	@echo "... sources/main.o"
 	@echo "... sources/main.i"
 	@echo "... sources/main.s"
-	@echo "... tests/test.o"
-	@echo "... tests/test.i"
-	@echo "... tests/test.s"
 .PHONY : help
 
 

@@ -90,7 +90,7 @@ TEST(AESCipher, Test1) {
     uint8_t encrypted[BUFF_SIZE] = {0};
     uint8_t decrypted[BUFF_SIZE] = {0};
     uint8_t buffer[BUFF_SIZE] = "I_WANT_TO_BE_A_PROGRAMMIST_IN_GOOGLE.";
-    uint8_t key[16] = "Key_is_128_bits";
+    uint8_t key[BUFF_SIZE] = "Key_is_128_bits";
     size_t length = 1;
     size_t length1 = 16;
     size_t length2 = 16;
@@ -115,7 +115,7 @@ TEST(AESCipher, Test2) {
     uint8_t encrypted[BUFF_SIZE] = {0};
     uint8_t decrypted[BUFF_SIZE] = {0};
     uint8_t buffer[BUFF_SIZE] = "Computers_change_our_life.";
-    uint8_t key[16] = "Key_is_128_bits";
+    uint8_t key[BUFF_SIZE] = "Key_is_128_bits";
     size_t length = 1;
     size_t length1 = 16;
     size_t length2 = 16;
@@ -139,7 +139,7 @@ TEST(AESCipher, Test3) {
     uint8_t encrypted[BUFF_SIZE] = {0};
     uint8_t decrypted[BUFF_SIZE] = {0};
     uint8_t buffer[BUFF_SIZE] = "This_programm_can_huck_your_computer.";
-    uint8_t key[16] = "Key_is_128_bits";
+    uint8_t key[BUFF_SIZE] = "Key_is_128_bits";
     size_t length = 1;
     size_t length1 = 16;
     size_t length2 = 16;
@@ -163,7 +163,7 @@ TEST(AESCipher, Test4) {
     uint8_t encrypted[BUFF_SIZE] = {0};
     uint8_t decrypted[BUFF_SIZE] = {0};
     uint8_t buffer[BUFF_SIZE] = "Programmist-is_a_highly-paid_job.";
-    uint8_t key[16] = "Key_is_128_bits";
+    uint8_t key[BUFF_SIZE] = "Key_is_128_bits";
     size_t length = 1;
     size_t length1 = 16;
     size_t length2 = 16;
