@@ -582,8 +582,8 @@ char const info_version_internal[] = {
 /* Construct a string literal encoding the version number components. */
 #ifdef SIMULATE_VERSION_MAJOR
 char const info_simulate_version[] = {
-  'I', 'N', 'F', 'O', ':',
-  's','i','m','u','l','a','t','e','_','v','e','r','s','i','o','n','[',
+  'I' , 'N' , 'F' , 'O' , ':' , 's' , 'i' , 'm' , 'u' , 'l' , 'a' , 't' , 'e' ,
+  '_' , 'v' , 'e' , 'r' , 's' , 'i' , 'o' , 'n' , '[' ,
   SIMULATE_VERSION_MAJOR,
 # ifdef SIMULATE_VERSION_MINOR
   '.', SIMULATE_VERSION_MINOR,
