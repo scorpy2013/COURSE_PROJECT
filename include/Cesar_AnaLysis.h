@@ -58,7 +58,7 @@ void Cesar_Analysis() {
         cout << i + 1 << ") Hacked string: " << en_str << endl;
         if (strcmp(en_str, de_str) == 0)
             break;
-        kol=i+1;
+        kol = i + 1;
     }
     end_time = clock(); // конечное время
     search_time = end_time - start_time; // искомое время

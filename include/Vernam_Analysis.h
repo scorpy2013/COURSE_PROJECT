@@ -24,7 +24,7 @@ void Vernam_Analysis() {
     cout << "Please enter an encrypted string: ";
     cin >> rez;
     L = rez.size();
-  size_t *key = new size_t[L];
+    size_t *key = new size_t[L];
     cout << "The key length is: " << L << endl;
     cout << "Please enter an decrypted string: ";
     cin >> str;

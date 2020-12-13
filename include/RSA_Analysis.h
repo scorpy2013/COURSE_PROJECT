@@ -70,7 +70,7 @@ void RSA_Analysis() {
     }
     cout << "Please enter a decrypted string:" << endl;
     cin >> Text;
-    max=strlen(Text);
+    max = strlen(Text);
     if (NEWMAX != max) {
         throw "Your encrypted and decrypted strings must have one length!!!";
     } else {

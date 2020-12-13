@@ -25,7 +25,7 @@ void Cesar_Cipher() {
     cout << endl;
     cout << "Please enter a string of length [1,100]: ";
     cin >> str;
-    if (strlen(str)>100)
+    if (strlen(str) > 100)
         throw "Your string has too big length!!!";
     for (size_t i = 0; i < strlen(str); i++) {
         if (str[i] < 33 || str[i] > 95)

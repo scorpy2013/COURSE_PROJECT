@@ -7,6 +7,8 @@
 
 #include <stdio.h>
 #include <stdint.h>
+#include <string>
+#include <iostream>
 
 // 10101100 << 2 = 10110000 | 00000010 = 10110010
 #define LSHIFT_nBIT(x, L, N) (((x << L) | (x >> (-L & (N - 1)))) & (((uint64_t)1 << N) - 1))
@@ -40,7 +42,7 @@ uint32_t GOST_join_4bits_to_32bits(uint8_t *blocks4b);
 
 static inline void GOST_print_array(uint8_t *array, size_t length);
 
-static inline void GOST_print_bits(uint64_t x, register uint64_t Nbit);
+static inline void GOST_print_bits(uint64_t x, uint64_t Nbit);
 
 // 1 | 4 -> 0xC
 static const uint8_t GOST_Sbox[8][16] = {
@@ -255,15 +257,17 @@ static inline void GOST_print_bits(uint64_t x, register uint64_t Nbit) {
 }
 
 void GOST_Cipher() {
-    string str;
+    std::string str;
+    int size;
     uint8_t encrypted[BUFF_SIZE], decrypted[BUFF_SIZE];
     uint8_t key256b[32] = "this_is_a_pas_for_GOST_28147_89";
 
     uint8_t buffer[BUFF_SIZE];
     size_t position;
-    cout << "Please enter a string:" << endl;
-    cin >> str;
-    for (int i = 0; i < str.size(); i++) {
+    std::cout << "Please enter a string:" << std::endl;
+    std::cin >> str;
+    size=str.size();
+    for (int i = 0; i < size; i++) {
         buffer[i] = str[i];
     }
     position = GOST_28147(encrypted, 'E', key256b, buffer, position);

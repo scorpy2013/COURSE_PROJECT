@@ -121,7 +121,7 @@ size_t AES(uint8_t *to, uint8_t mode, uint8_t *key, uint8_t key_size, uint8_t *f
     const uint8_t Nr = (key_size == 16) ? 10 : (key_size == 24) ? 12 : 14;
     const size_t Nw = Nb * (Nr + 1);
 
-    uint32_t *Wkey = new uint32_t [Nw];
+    uint32_t *Wkey = new uint32_t[Nw];
     key_expansion(Wkey, key, Nb, Nk, Nr);
 
     uint8_t block[16];

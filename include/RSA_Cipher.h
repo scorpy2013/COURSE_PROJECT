@@ -30,7 +30,7 @@ int random_simple(const int &n) {
     return simple;
 }
 
-int NOD( int a, int b) {
+int NOD(int a, int b) {
     int c;
     while (b) {
         c = a % b;

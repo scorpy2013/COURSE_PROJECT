@@ -33,7 +33,7 @@ bool increment_state(size_t *pState, size_t CharsetSize, size_t Count) {
 }
 
 void Gamma_Analysis() {
-    int kol=1;
+    int kol = 1;
     double start_time, end_time, search_time; // считаем время взлома
     int L; // длина нашего ключа
     string str, str1, gamma, GAMMA, rez;
@@ -63,7 +63,7 @@ void Gamma_Analysis() {
 
     start_time = clock(); // начальное время
     do {
-        cout << kol  << " KEY: ";
+        cout << kol << " KEY: ";
         print_key_generate_gamma(pCharset, key, L, gamma);
         Gamma_Decoding(rez, gamma, str1);
         cout << " ===> HACKED STRING: " << str1 << endl;
