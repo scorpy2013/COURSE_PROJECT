@@ -555,7 +555,8 @@ defined(__aix__)
 /* Construct a string literal encoding the version number components. */
 #ifdef COMPILER_VERSION_MAJOR
 char const info_version[] = {
-        'I', 'N', 'F', 'O', ':', 'c', 'o', 'm', 'p', 'i', 'l', 'e', 'r', '_', 'v', 'e', 'r', 's', 'i', 'o', 'n', '[',
+        'I' , 'N' , 'F' , 'O' , ':' , 'c' , 'o' , 'm' , 'p' , 'i' , 'l' , 'e' ,
+        'r' , '_' , 'v' , 'e' , 'r' , 's' , 'i' , 'o' , 'n' , '[' ,
         COMPILER_VERSION_MAJOR,
 # ifdef COMPILER_VERSION_MINOR
         '.', COMPILER_VERSION_MINOR,
@@ -566,16 +567,16 @@ char const info_version[] = {
 #   endif
 #  endif
 # endif
-        ']', '\0'};
+        ']' , '\0'};
 #endif
 
 /* Construct a string literal encoding the internal version number. */
 #ifdef COMPILER_VERSION_INTERNAL
 char const info_version_internal[] = {
-  'I', 'N', 'F', 'O', ':',
-  'c','o','m','p','i','l','e','r','_','v','e','r','s','i','o','n','_', 'i','n'
-  ,'t','e','r','n','a','l','[',
-  COMPILER_VERSION_INTERNAL, ']', '\0'};
+  'I' , 'N' , 'F' , 'O' , ':' , 'c' , 'o' , 'm' , 'p' , 'i' , 'l' , 'e' , 'r' ,
+  '_' , 'v' , 'e' , 'r' , 's' , 'i' , 'o' , 'n' , '_' , 'i' , 'n' , 't' , 'e' ,
+  'r' , 'n' , 'a' , 'l' , '[' ,
+  COMPILER_VERSION_INTERNAL, ']' , '\0'};
 #endif
 
 /* Construct a string literal encoding the version number components. */
