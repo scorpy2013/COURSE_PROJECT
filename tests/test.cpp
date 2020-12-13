@@ -82,7 +82,7 @@ TEST(GAMMA, Decoding3) {
     Gamma_Decoding(rez, gamma, str2);
     ASSERT_EQ(str1, str2);
 }
-/*
+
 TEST(AESCipher, Test1) {
     string text;
     string encrypted_text = "\xC0vc\x87\xEF`lz\x8EP\xF6" "4\x7F\xE7\xFAq";
@@ -179,7 +179,7 @@ TEST(AESCipher, Test4) {
     ASSERT_EQ(length, length2);
     ASSERT_EQ(text, decrypted_text);
 }
-*/
+
 TEST(DESCipher, Test1) {
     string text;
     string encrypted_text = "\xE5\xAC\xD4'E\xE1\xF5N\xB7\xBD\xDA\x8A|\xB6\xAC@"
