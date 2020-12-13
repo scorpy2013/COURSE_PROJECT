@@ -134,8 +134,7 @@ TEST(AESCipher, Test2) {
 
 TEST(AESCipher, Test3) {
     string text;
-    string encrypted_text = "\x9F" "f\x84\xF0" "0\xC4\xD3=\rG\v\x9F\xF2v\x1Dn"
-            ;
+    string encrypted_text = "\x9F" "f\x84\xF0" "0\xC4\xD3=\rG\v\x9F\xF2v\x1Dn";
     string decrypted_text = "This_programm_ca";
     uint8_t encrypted[BUFF_SIZE] = {0};
     uint8_t decrypted[BUFF_SIZE] = {0};
@@ -208,8 +207,8 @@ TEST(DESCipher, Test1) {
 
 TEST(DESCipher, Test2) {
     string text;
-    string encrypted_text = "\xA2\xCF\xB5" "d\x19h\xD0<\xA7\x1Bu\xE4\x88\xBA\xEB"
-                                           "z";
+    string encrypted_text = "\xA2\xCF\xB5" "d\x19h\xD0<\xA7\x1Bu\xE4\x88\xBA"
+                                           "\xEBz";
     string decrypted_text = "Computers_change";
     uint8_t encrypted[BUFF_SIZE] = {0};
     uint8_t decrypted[BUFF_SIZE] = {0};
