@@ -47,9 +47,11 @@ TEST(GAMMA, Coding2) {
 
 TEST(GAMMA, Coding3) {
     string str, gamma, rez1, rez2;
-    str = "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_abcdefghijklmnopqrstuvwxyz{|}~ ";
+    str = "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_ab"
+          "cdefghijklmnopqrstuvwxyz{|}~ ";
     gamma = "ALL_SYMBOLS_ARE_HERE";
-    rez1 = "BNOcX_TJXV^kN`ToYWeYVbcwlsh^ljr bth$mkymjvw,!(|r!~'4v)|8\" .\"~+,A6=2(64<I,>2M75C74@AUJQF<JHP]@R";
+    rez1 = "BNOcX_TJXV^kN`ToYWeYVbcwlsh^ljr bth$mkymjvw,!(|r!~'4v)|8\" .\"~+,A"
+           "6=2(64<I,>2M75C74@AUJQF<JHP]@R";
     Gamma_Coding(str, gamma, rez2);
     ASSERT_EQ(rez1, rez2);
 }
@@ -107,7 +109,8 @@ TEST(AESCipher, Test1) {
 
 TEST(AESCipher, Test2) {
     string text;
-    string encrypted_text = "_R\xCA'\x87" "8\xB0\xF5\n\x12\x97\xA0" "E\x83\xD6\xE2";
+    string encrypted_text = "_R\xCA'\x87" "8\xB0\xF5\n\x12\x97\xA0" "E\x83\xD6"
+                                                                    "\xE2";
     string decrypted_text = "Computers_change";
     uint8_t encrypted[BUFF_SIZE] = {0};
     uint8_t decrypted[BUFF_SIZE] = {0};
@@ -179,7 +182,8 @@ TEST(AESCipher, Test4) {
 
 TEST(DESCipher, Test1) {
     string text;
-    string encrypted_text = "\xE5\xAC\xD4'E\xE1\xF5N\xB7\xBD\xDA\x8A|\xB6\xAC@";
+    string encrypted_text = "\xE5\xAC\xD4'E\xE1\xF5N\xB7\xBD\xDA\x8A|\xB6\xAC@"
+                            "";
     string decrypted_text = "I_WANT_TO_BE_A_P";
     uint8_t encrypted[BUFF_SIZE] = {0};
     uint8_t decrypted[BUFF_SIZE] = {0};
@@ -203,7 +207,8 @@ TEST(DESCipher, Test1) {
 
 TEST(DESCipher, Test2) {
     string text;
-    string encrypted_text = "\xA2\xCF\xB5" "d\x19h\xD0<\xA7\x1Bu\xE4\x88\xBA\xEBz";
+    string encrypted_text = "\xA2\xCF\xB5" "d\x19h\xD0<\xA7\x1Bu\xE4\x88\xBA\xEB"
+                                           "z";
     string decrypted_text = "Computers_change";
     uint8_t encrypted[BUFF_SIZE] = {0};
     uint8_t decrypted[BUFF_SIZE] = {0};
@@ -276,7 +281,8 @@ TEST(DESCipher, Test4) {
 TEST(RSACipher, Test1) {
     vector<int> numbers = {100, 200, 300, 400, 500, 600, 700, 800, 900, 1000};
     vector<int> simple_numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    vector<bool> simple = {false, false, false, false, false, false, false, false, false, false};
+    vector<bool> simple = {false, false, false, false, false, false, false,
+                           false, false, false};
     for (int i = 0; i < 10; i++) {
         simple_numbers[i] = random_simple(numbers[i]);
         simple[i] = simple_or_not(simple_numbers[i]);
@@ -296,7 +302,8 @@ TEST(BlowFish, Test1) {
     uint8_t encrypted[BUFF_SIZE] = {0};
     uint8_t decrypted[BUFF_SIZE] = {0};
     uint8_t buffer[BUFF_SIZE] = "I_WANT_TO_BE_A_PROGRAMMIST_IN_GOOGLE.";
-    uint8_t key64b[56] = "This_is_a_blowfish__448__bits__key__and__64__bits__text";
+    uint8_t key64b[56] = "This_is_a_blowfish__448__bits__key__and__64__bits__t"
+                         "ext";
     size_t length = KEY_SIZE;
     size_t length1 = 16;
     size_t length2 = 16;
@@ -321,7 +328,8 @@ TEST(BlowFish, Test2) {
     uint8_t encrypted[BUFF_SIZE] = {0};
     uint8_t decrypted[BUFF_SIZE] = {0};
     uint8_t buffer[BUFF_SIZE] = "Computers_change_our_life.";
-    uint8_t key64b[56] = "This_is_a_blowfish__448__bits__key__and__64__bits__text";
+    uint8_t key64b[56] = "This_is_a_blowfish__448__bits__key__and__64__bits__t"
+                         "ext";
     size_t length = KEY_SIZE;
     size_t length1 = 16;
     size_t length2 = 16;
@@ -341,12 +349,14 @@ TEST(BlowFish, Test2) {
 
 TEST(BlowFish, Test3) {
     string text;
-    string encrypted_text = "\xB1N\xE5\x90\x5\x91\xA5\\\x1D" "1\x89+z\xC4\xDBi";
+    string encrypted_text = "\xB1N\xE5\x90\x5\x91\xA5\\\x1D" "1\x89+z\xC4\xDBi"
+                                                             "";
     string decrypted_text = "This_programm_ca";
     uint8_t encrypted[BUFF_SIZE] = {0};
     uint8_t decrypted[BUFF_SIZE] = {0};
     uint8_t buffer[BUFF_SIZE] = "This_programm_can_huck_your_computer.";
-    uint8_t key64b[56] = "This_is_a_blowfish__448__bits__key__and__64__bits__text";
+    uint8_t key64b[56] = "This_is_a_blowfish__448__bits__key__and__64__bits__t"
+                         "ext";
     size_t length = KEY_SIZE;
     size_t length1 = 16;
     size_t length2 = 16;
@@ -371,7 +381,8 @@ TEST(BlowFish, Test4) {
     uint8_t encrypted[BUFF_SIZE] = {0};
     uint8_t decrypted[BUFF_SIZE] = {0};
     uint8_t buffer[BUFF_SIZE] = "Programmist-is_a_highly-paid_job.";
-    uint8_t key64b[56] = "This_is_a_blowfish__448__bits__key__and__64__bits__text";
+    uint8_t key64b[56] = "This_is_a_blowfish__448__bits__key__and__64__bits__t"
+                         "ext";
     size_t length = KEY_SIZE;
     size_t length1 = 16;
     size_t length2 = 16;
