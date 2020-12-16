@@ -5,7 +5,8 @@ CMakeFiles/template.dir/sources/main.cpp.o: ../include/AES_Analysis.h
 CMakeFiles/template.dir/sources/main.cpp.o: ../include/AES_Cipher.h
 CMakeFiles/template.dir/sources/main.cpp.o: ../include/BlowFish_Analysis.h
 CMakeFiles/template.dir/sources/main.cpp.o: ../include/BlowFish_Cipher.h
-CMakeFiles/template.dir/sources/main.cpp.o: ../include/Cesar_AnaLysis.h
+CMakeFiles/template.dir/sources/main.cpp.o: ../include/Cesar_Analysis.h
+CMakeFiles/template.dir/sources/main.cpp.o: ../include/Cesar_Analysis_Frequency.h
 CMakeFiles/template.dir/sources/main.cpp.o: ../include/Cesar_Cipher.h
 CMakeFiles/template.dir/sources/main.cpp.o: ../include/DES_Analysis.h
 CMakeFiles/template.dir/sources/main.cpp.o: ../include/DES_Cipher.h

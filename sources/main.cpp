@@ -1,7 +1,8 @@
 // Copyright [2020] <Copyright scorpy2013>
 
 #include "Cesar_Cipher.h"
-#include "Cesar_AnaLysis.h"
+#include "Cesar_Analysis.h"
+#include "Cesar_Analysis_Frequency.h"
 #include "Gamma_Cipher.h"
 #include "Gamma_Analysis.h"
 #include "Vernam_Cipher.h"
@@ -97,13 +98,13 @@ int main() {
                 endl;
                 cout << "                                           ||" <<
                 endl;
-                cout << "                           THE METHOD OF COMPLETE ENU"
-                        "MERATION" << endl;
+                cout << "              THE METHOD OF COMPLETE ENUMERATION + FREQUENCY ANALYSIS" << endl;
                 cout << "-----------------------------------------------------"
                         "--------------------------------------"
                      << endl;
                 try {
                     Cesar_Analysis();
+                    Cesar_Analysis_Frequency();
                 }
                 catch (const char *str) {
                     cout << str << endl;

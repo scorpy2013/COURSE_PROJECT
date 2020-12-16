@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 #include "Cesar_Cipher.h"
-#include "Cesar_AnaLysis.h"
+#include "Cesar_Analysis.h"
 #include "Gamma_Cipher.h"
 #include "Gamma_Analysis.h"
 #include "Vernam_Cipher.h"

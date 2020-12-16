@@ -6,7 +6,8 @@ CMakeFiles/tests.dir/sources/main.cpp.o
  ../include/AES_Cipher.h
  ../include/BlowFish_Analysis.h
  ../include/BlowFish_Cipher.h
- ../include/Cesar_AnaLysis.h
+ ../include/Cesar_Analysis.h
+ ../include/Cesar_Analysis_Frequency.h
  ../include/Cesar_Cipher.h
  ../include/DES_Analysis.h
  ../include/DES_Cipher.h

@@ -34,7 +34,7 @@ cstdio
 cstdint
 -
 
-../include/Cesar_AnaLysis.h
+../include/Cesar_Analysis.h
 iostream
 -
 cstdio
@@ -46,6 +46,18 @@ vector
 cstring
 -
 ctime
+-
+
+../include/Cesar_Analysis_Frequency.h
+iostream
+-
+cstring
+-
+vector
+-
+iomanip
+-
+algorithm
 -
 
 ../include/Cesar_Cipher.h
@@ -147,8 +159,10 @@ cstring
 /home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/main.cpp
 Cesar_Cipher.h
 /home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/Cesar_Cipher.h
-Cesar_AnaLysis.h
-/home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/Cesar_AnaLysis.h
+Cesar_Analysis.h
+/home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/Cesar_Analysis.h
+Cesar_Analysis_Frequency.h
+/home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/Cesar_Analysis_Frequency.h
 Gamma_Cipher.h
 /home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/Gamma_Cipher.h
 Gamma_Analysis.h
