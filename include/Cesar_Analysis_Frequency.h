@@ -26,7 +26,6 @@ bool operator<(Frequency left, Frequency right) {
 void Cesar_Analysis_Frequency() {
     vector<Frequency> frequency;
     vector<Frequency> frequency_of_english_symbols;
-    vector<Frequency>::iterator it;
     int number;
     string str1;
     char str[100],en_str[100];
