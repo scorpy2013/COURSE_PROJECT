@@ -178,6 +178,7 @@ void DES_Cipher() {
             throw "Code of your symbols must be in this range -> [33,126] !!!";
     }
     print_array(buffer, length);
+    cout << "Your generated key ===> [" << keys8b <<"]" << endl;
     cout << "Encrypted string: " << endl;
     length = DES(encrypted, 'E', keys8b, buffer, length);
     print_array(encrypted, length);

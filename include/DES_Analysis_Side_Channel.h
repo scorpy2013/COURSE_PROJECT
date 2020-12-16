@@ -1,24 +1,18 @@
 //
-// Created by alexscorpy on 25.11.2020.
+// Created by alexscorpy on 16.12.2020.
 //
 
-#ifndef CURSE_CODE_DES_ANALYSIS_H
-#define CURSE_CODE_DES_ANALYSIS_H
-char const *pCharset2 = "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
+#ifndef TEMPLATE_DES_ANALYSIS_SIDE_CHANNEL_H
+#define TEMPLATE_DES_ANALYSIS_SIDE_CHANNEL_H
 
-void DES_random_key(uint8_t key[8]) {
-    cout << "[ ";
-    for (int i = 0; i < 8; i++) {
-        key[i] = pCharset2[rand() % 100 - 6];
-        cout << key[i] << " ";
-    }
-    cout << "]" << endl;
-}
+#define BUFF_SIZE 1024
+#include <iostream>
+#include "DES_Cipher.h"
 
-void DES_Analysis() {
-    int I = 0;
+using namespace std;
+
+void DES_Analysis_Side_Channel() {
     string button;
-    double start_time, end_time, search_time; // считаем время взлома
     string str, STR;
     uint8_t encrypted[BUFF_SIZE], decrypted[BUFF_SIZE];
     uint8_t buffer[BUFF_SIZE] = {0};
@@ -55,10 +49,8 @@ void DES_Analysis() {
     cout << "Write <<YES>> if you want to make a cryptoanalysis." << endl;
     cin >> button;
     if (button == "YES") {
-        start_time = clock(); // начальное время
-        while (str != STR && I < 99999) {
-            cout << I + 1 << ") ITERATION:" << endl;
-            DES_random_key(keys8b);
+        cout << "You key was stolen by hackers!" << endl;
+        cout << "Your key is [" << keys8b << "]." << endl;
             cout << "Decrypted string: " << endl;
             length = DES(decrypted, 'D', keys8b, encrypted, length);
             cout << "[ ";
@@ -71,16 +63,11 @@ void DES_Analysis() {
             cout << "]" << endl;
             cout << endl;
             STR.clear();
-            I++;
         }
-        end_time = clock(); // конечное время
-        search_time = end_time - start_time; // искомое время
-        cout << "Time for hacking: " << search_time << " milliseconds (" << search_time / 1000 << " seconds)" << endl;
-        cout << "This cipher can't be hacked!" << endl;
+        cout << "This cipher was hacked! However..." << endl;
         cout << "                     -------------------------------------------------" << endl;
         cout << "     =========>      |DES CIPHER HAS THE AVERAGE ENCRYPTION STRENGTH!|      <=========" << endl;
         cout << "                     -------------------------------------------------" << endl;
     }
-}
 
-#endif //CURSE_CODE_DES_ANALYSIS_H
+#endif //TEMPLATE_DES_ANALYSIS_SIDE_CHANNEL_H

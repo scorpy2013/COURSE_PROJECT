@@ -49,6 +49,7 @@ void AES_Analysis() {
             throw "Code of your symbols must be in this range -> [33,126] !!!";
     }
     AES_print_array(buffer, length);
+    cout << "Your generated key ===> [" << key <<"]" << endl;
     cout << "Encrypted string: " << endl;
     length = AES(encrypted, 'E', key, KEY_SIZE, buffer, length);
     AES_print_array(encrypted, length);

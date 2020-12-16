@@ -160,7 +160,7 @@ size_t AES(uint8_t *to, uint8_t mode, uint8_t *key, uint8_t key_size, uint8_t *f
         }
             break;
     }
-    delete [] Wkey;
+
     return length;
 }
 
@@ -391,6 +391,7 @@ void AES_Cipher() {
             throw "Code of your symbols must be in this range -> [33,126] !!!";
     }
     AES_print_array(buffer, length);
+    cout << "Your generated key ===> [" << key <<"]" << endl;
     cout << "Encrypted string: " << endl;
     length = AES(encrypted, 'E', key, KEY_SIZE, buffer, length);
     AES_print_array(encrypted, length);

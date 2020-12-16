@@ -33,8 +33,10 @@ void random_key(int &P, int &Q, unsigned int &E, int &D, int &N) {
         e += 1;
         e_simple = (e * d) % ((p_simple - 1) * (q_simple - 1));
     }
-    cout << "Open key ===> " << "{e,n} <=> " << "{" << e << "," << n << "}" << endl;
-    cout << "Secret key ===> " << "{d,n} <=> " << "{" << d << "," << n << "}" << endl;
+    cout << "Open key ===> " << "{e,n} <=> " << "{" << e << "," << n << "}"
+    << endl;
+    cout << "Secret key ===> " << "{d,n} <=> " << "{" << d << "," << n << "}"
+    << endl;
     P = p;
     Q = q;
     E = e;
@@ -103,10 +105,12 @@ void RSA_Analysis() {
     }
     end_time = clock(); // конечное время
     search_time = end_time - start_time; // искомое время
-    cout << "Time for hacking: " << search_time << " milliseconds (" << search_time / 1000 << " seconds)" << endl;
+    cout << "Time for hacking: " << search_time << " milliseconds (" <<
+    search_time / 1000 << " seconds)" << endl;
     cout << "This cipher can't be hacked!" << endl;
     cout << "                     -----------------------------------" << endl;
-    cout << "     =========>      |RSA CIPHER HAS A HIGH RESISTANCE!|      <=========" << endl;
+    cout << "     =========>      |RSA CIPHER HAS A HIGH RESISTANCE!|      <=="
+            "=======" << endl;
     cout << "                     -----------------------------------" << endl;
     delete[] Text;
     delete[] CryptoText;

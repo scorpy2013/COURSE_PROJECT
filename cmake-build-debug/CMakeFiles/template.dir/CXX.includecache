@@ -18,6 +18,18 @@ iostream
 AES_Cipher.h
 ../include/AES_Cipher.h
 
+../include/AES_Analysis_Side_Channel.h
+cstdint
+-
+cstdio
+-
+cstring
+-
+iostream
+-
+AES_Cipher.h
+../include/AES_Cipher.h
+
 ../include/AES_Cipher.h
 cstdio
 -
@@ -27,6 +39,12 @@ cstring
 -
 
 ../include/BlowFish_Analysis.h
+
+../include/BlowFish_Analysis_Side_Channel.h
+iostream
+-
+BlowFish_Cipher.h
+../include/BlowFish_Cipher.h
 
 ../include/BlowFish_Cipher.h
 cstdio
@@ -74,6 +92,12 @@ cstring
 
 ../include/DES_Analysis.h
 
+../include/DES_Analysis_Side_Channel.h
+iostream
+-
+DES_Cipher.h
+../include/DES_Cipher.h
+
 ../include/DES_Cipher.h
 stdio.h
 -
@@ -93,6 +117,14 @@ cstdio
 -
 cstdlib
 -
+
+../include/Gamma_Analysis_Side_Channel.h
+iostream
+-
+cstring
+-
+Gamma_Cipher.h
+../include/Gamma_Cipher.h
 
 ../include/Gamma_Cipher.h
 string
@@ -116,6 +148,12 @@ ctime
 cstdlib
 -
 iomanip
+-
+
+../include/RSA_Analysis_Side_Channel.h
+iostream
+-
+string
 -
 
 ../include/RSA_Cipher.h
@@ -146,6 +184,12 @@ cstdio
 cstdlib
 -
 
+../include/Vernam_Analysis_Side_Channel.h
+iostream
+-
+Gamma_Cipher.h
+../include/Gamma_Cipher.h
+
 ../include/Vernam_Cipher.h
 string
 -
@@ -167,24 +211,36 @@ Gamma_Cipher.h
 /home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/Gamma_Cipher.h
 Gamma_Analysis.h
 /home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/Gamma_Analysis.h
+Gamma_Analysis_Side_Channel.h
+/home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/Gamma_Analysis_Side_Channel.h
 Vernam_Cipher.h
 /home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/Vernam_Cipher.h
 Vernam_Analysis.h
 /home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/Vernam_Analysis.h
+Vernam_Analysis_Side_Channel.h
+/home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/Vernam_Analysis_Side_Channel.h
 RSA_Cipher.h
 /home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/RSA_Cipher.h
 RSA_Analysis.h
 /home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/RSA_Analysis.h
+RSA_Analysis_Side_Channel.h
+/home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/RSA_Analysis_Side_Channel.h
 DES_Cipher.h
 /home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/DES_Cipher.h
 DES_Analysis.h
 /home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/DES_Analysis.h
+DES_Analysis_Side_Channel.h
+/home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/DES_Analysis_Side_Channel.h
 AES_Cipher.h
 /home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/AES_Cipher.h
 AES_Analysis.h
 /home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/AES_Analysis.h
+AES_Analysis_Side_Channel.h
+/home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/AES_Analysis_Side_Channel.h
 BlowFish_Cipher.h
 /home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/BlowFish_Cipher.h
 BlowFish_Analysis.h
 /home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/BlowFish_Analysis.h
+BlowFish_Analysis_Side_Channel.h
+/home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/BlowFish_Analysis_Side_Channel.h
 

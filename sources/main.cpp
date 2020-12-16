@@ -5,16 +5,22 @@
 #include "Cesar_Analysis_Frequency.h"
 #include "Gamma_Cipher.h"
 #include "Gamma_Analysis.h"
+#include "Gamma_Analysis_Side_Channel.h"
 #include "Vernam_Cipher.h"
 #include "Vernam_Analysis.h"
+#include "Vernam_Analysis_Side_Channel.h"
 #include "RSA_Cipher.h"
 #include "RSA_Analysis.h"
+#include "RSA_Analysis_Side_Channel.h"
 #include "DES_Cipher.h"
 #include "DES_Analysis.h"
+#include "DES_Analysis_Side_Channel.h"
 #include "AES_Cipher.h"
 #include "AES_Analysis.h"
+#include "AES_Analysis_Side_Channel.h"
 #include "BlowFish_Cipher.h"
 #include "BlowFish_Analysis.h"
+#include "BlowFish_Analysis_Side_Channel.h"
 
 int main() {
     int button = 0;
@@ -98,7 +104,8 @@ int main() {
                 endl;
                 cout << "                                           ||" <<
                 endl;
-                cout << "              THE METHOD OF COMPLETE ENUMERATION + FREQUENCY ANALYSIS" << endl;
+                cout << "              THE METHOD OF COMPLETE ENUMERATION + FR"
+                        "EQUENCY ANALYSIS" << endl;
                 cout << "-----------------------------------------------------"
                         "--------------------------------------"
                      << endl;
@@ -131,13 +138,14 @@ int main() {
                 endl;
                 cout << "                                           ||" <<
                 endl;
-                cout << "                           THE METHOD OF COMPLETE ENU"
-                        "MERATION" << endl;
+                cout << "              THE METHOD OF COMPLETE ENUMERATION + SI"
+                        "DE-CHANNEL ATTACK" << endl;
                 cout << "-----------------------------------------------------"
                         "--------------------------------------"
                      << endl;
                 try {
                     Gamma_Analysis();
+                    Gamma_Analysis_Side_channel();
                 }
                 catch (const char *str) {
                     cout << str << endl;
@@ -164,13 +172,14 @@ int main() {
                 endl;
                 cout << "                                           ||" <<
                 endl;
-                cout << "                           THE METHOD OF COMPLETE ENU"
-                        "MERATION" << endl;
+                cout << "              THE METHOD OF COMPLETE ENUMERATION + SI"
+                        "DE-CHANNEL ATTACK" << endl;
                 cout << "-----------------------------------------------------"
                         "--------------------------------------"
                      << endl;
                 try {
                     Vernam_Analysis();
+                    Vernam_Analysis_Side_channel();
                 }
                 catch (const char *str) {
                     cout << str << endl;
@@ -197,13 +206,14 @@ int main() {
                 endl;
                 cout << "                                           ||" <<
                 endl;
-                cout << "                           THE METHOD OF COMPLETE ENU"
-                        "MERATION" << endl;
+                cout << "              THE METHOD OF COMPLETE ENUMERATION + SI"
+                        "DE-CHANNEL ATTACK" << endl;
                 cout << "-----------------------------------------------------"
                         "--------------------------------------"
                      << endl;
                 try {
                     AES_Analysis();
+                    AES_Analysis_Side_Channel();
                 }
                 catch (const char *str) {
                     cout << str << endl;
@@ -230,13 +240,14 @@ int main() {
                 endl;
                 cout << "                                           ||" <<
                 endl;
-                cout << "                           THE METHOD OF COMPLETE ENU"
-                        "MERATION" << endl;
+                cout << "              THE METHOD OF COMPLETE ENUMERATION + SI"
+                        "DE-CHANNEL ATTACK" << endl;
                 cout << "-----------------------------------------------------"
                         "--------------------------------------"
                      << endl;
                 try {
                     DES_Analysis();
+                    DES_Analysis_Side_Channel();
                 }
                 catch (const char *str) {
                     cout << str << endl;
@@ -263,13 +274,14 @@ int main() {
                 endl;
                 cout << "                                           ||" <<
                 endl;
-                cout << "                           THE METHOD OF COMPLETE ENU"
-                        "MERATION" << endl;
+                cout << "              THE METHOD OF COMPLETE ENUMERATION + SI"
+                        "DE-CHANNEL ATTACK" << endl;
                 cout << "-----------------------------------------------------"
                         "--------------------------------------"
                      << endl;
                 try {
                     RSA_Analysis();
+                    RSA_Cipher_Analysis_Side_Channel();
                 }
                 catch (const char *str) {
                     cout << str << endl;
@@ -296,13 +308,14 @@ int main() {
                 endl;
                 cout << "                                           ||" <<
                 endl;
-                cout << "                        THE METHOD OF COMPLETE ENUMER"
-                        "ATION" << endl;
+                cout << "              THE METHOD OF COMPLETE ENUMERATION + SI"
+                        "DE-CHANNEL ATTACK" << endl;
                 cout << "-----------------------------------------------------"
                         "--------------------------------------"
                      << endl;
                 try {
                     BlowFish_Analysis();
+                    BlowFish_Analysis_Side_Channel();
                 }
                 catch (const char *str) {
                     cout << str << endl;

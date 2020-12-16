@@ -28,6 +28,7 @@ void BlowFish_Analysis() {
     }
 
     BF_print_array(buffer, length);
+    cout << "Your generated key ===> [" << key64b <<"]" << endl;
     BF_key_extension(__Keys32b, key64b, 448);
     cout << "Encrypted string: " << endl;
     length = blowfish(encrypted, 'E', __Keys32b, buffer, length);

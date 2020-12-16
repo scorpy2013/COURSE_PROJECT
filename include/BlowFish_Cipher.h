@@ -250,7 +250,7 @@ void BlowFish_Cipher() {
             throw "Code of your symbols must be in this range -> [33,126] !!!";
     }
     BF_print_array(buffer, length);
-
+    cout << "Your generated key ===> [" << key64b <<"]" << endl;
     BF_key_extension(__Keys32b, key64b, 448);
     cout << "Encrypted string: " << endl;
     length = blowfish(encrypted, 'E', __Keys32b, buffer, length);
