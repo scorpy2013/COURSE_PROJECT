@@ -65,9 +65,12 @@ void DES_Analysis_Side_Channel() {
             STR.clear();
         }
         cout << "This cipher was hacked! However..." << endl;
-        cout << "                     -------------------------------------------------" << endl;
-        cout << "     =========>      |DES CIPHER HAS THE AVERAGE ENCRYPTION STRENGTH!|      <=========" << endl;
-        cout << "                     -------------------------------------------------" << endl;
+        cout << "                     ----------------------------------------"
+                "---------" << endl;
+        cout << "     =========>      |DES CIPHER HAS THE AVERAGE ENCRYPTION S"
+                "TRENGTH!|      <=========" << endl;
+        cout << "                     ----------------------------------------"
+                "---------" << endl;
     }
 
 #endif //TEMPLATE_DES_ANALYSIS_SIDE_CHANNEL_H

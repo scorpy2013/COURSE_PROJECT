@@ -37,8 +37,10 @@ void RSA_Cipher_Analysis_Side_Channel() {
     cout << "n = p*q = " << n << endl;
     cout << "Euler Function F(n) = (p_simple-1)*(q_simple-1) = " << Euler << endl;
     cout << "d = " << d << endl;
-    cout << "Open key ===> " << "{e,n} <=> " << "{" << e << "," << n << "}" << endl;
-    cout << "Secret key ===> " << "{d,n} <=> " << "{" << d << "," << n << "}" << endl;
+    cout << "Open key ===> " << "{e,n} <=> " << "{" << e << "," << n << "}"
+    << endl;
+    cout << "Secret key ===> " << "{d,n} <=> " << "{" << d << "," << n << "}"
+    << endl;
     const int MAX = 100;
     char *Text = new char[MAX];
     cout << "You can use these symbols:" << endl;
@@ -59,8 +61,10 @@ void RSA_Cipher_Analysis_Side_Channel() {
 //ci = (mj^e)%n.
     int b = 301;
     int c;
-    cout << "|STRING|ASCII CODE|CryptoText/Block|ASCII DECRYPTED CODE|DECRYPTED STRING|" << endl
-         << "--------------------------------------------------------------------------" << endl;
+    cout << "|STRING|ASCII CODE|CryptoText/Block|ASCII DECRYPTED CODE|DECRYPTE"
+            "D STRING|" << endl
+         << "-----------------------------------------------------------------"
+            "---------" << endl;
     for (size_t j = 0; j < str.size(); j++) {
         c = 1;
         unsigned int i = 0;
@@ -94,14 +98,17 @@ void RSA_Cipher_Analysis_Side_Channel() {
             cout << Text[j];
         else cout << " ";
         cout << "|   " << left << setw(7)
-             << static_cast<int>(Text[j]) << "|      " << left << setw(10) << CryptoText[j] << "|        "
-             << setw(12) << left << Tdecrypt[j] << "|       " << left << setw(9);
+             << static_cast<int>(Text[j]) << "|      " << left << setw(10)
+             << CryptoText[j] << "|        "
+             << setw(12) << left << Tdecrypt[j] << "|       " << left
+             << setw(9);
         if (Text[j] != '\0')
             cout << static_cast<char>(Tdecrypt[j]);
         else cout << " ";
         cout << "|" << endl;
     }
-    cout << "--------------------------------------------------------------------------" << endl;
+    cout << "-----------------------------------------------------------------"
+            "---------" << endl;
     cout << "Do you want to hack this cipher???" << endl;
     cout << "Write <<YES>> if you want to make a cryptoanalysis." << endl;
     cin >> button;
@@ -115,9 +122,12 @@ void RSA_Cipher_Analysis_Side_Channel() {
         }
         cout << endl;
         cout << "This cipher was hacked! However..." << endl;
-        cout << "                     -----------------------------------" << endl;
-        cout << "     =========>      |RSA CIPHER HAS A HIGH RESISTANCE!|      <=========" << endl;
-        cout << "                     -----------------------------------" << endl;
+        cout << "                     -----------------------------------"
+        << endl;
+        cout << "     =========>      |RSA CIPHER HAS A HIGH RESISTANCE!|     "
+                " <=========" << endl;
+        cout << "                     -----------------------------------"
+        << endl;
     }
     delete[] Text;
     delete[] CryptoText;

@@ -25,7 +25,8 @@ void Vernam_Analysis_Side_channel() {
         throw "Gamma and your text must have one length!";
     } else {
         for (size_t i = 0; i < str1.size(); i++) {
-            if (str1[i] < 33 || str1[i] > 126 || gamma[i] < 33 || gamma[i] > 126)
+            if (str1[i] < 33 || str1[i] > 126 || gamma[i] < 33 ||
+            gamma[i] > 126)
                 throw "Code of symbols of your string is not correct!!!";
         }
     }

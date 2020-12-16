@@ -43,9 +43,12 @@ void Gamma_Analysis_Side_channel() {
         cout << "Hacked string: ";
         cout << str1 << endl;
         cout << "This cipher was hacked! However..." << endl;
-        cout << "                     ---------------------------------------" << endl;
-        cout << "     =========>      |GAMMING CIPHER HAS A HIGH RESISTANCE!|      <=========" << endl;
-        cout << "                     ---------------------------------------" << endl;
+        cout << "                     ---------------------------------------"
+        << endl;
+        cout << "     =========>      |GAMMING CIPHER HAS A HIGH RESISTANCE!| "
+                "     <=========" << endl;
+        cout << "                     ---------------------------------------"
+        << endl;
     }
 }
 
