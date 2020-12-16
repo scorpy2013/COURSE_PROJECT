@@ -1,20 +1,11 @@
 // Copyright 2020 Your Name <your_email>
 
 #include <gtest/gtest.h>
-#include "Cesar_Cipher.h"
-#include "Cesar_Analysis.h"
 #include "Gamma_Cipher.h"
-#include "Gamma_Analysis.h"
-#include "Vernam_Cipher.h"
-#include "Vernam_Analysis.h"
 #include "RSA_Cipher.h"
-#include "RSA_Analysis.h"
 #include "DES_Cipher.h"
-#include "DES_Analysis.h"
 #include "AES_Cipher.h"
-#include "AES_Analysis.h"
 #include "BlowFish_Cipher.h"
-#include "BlowFish_Analysis.h"
 #include <string>
 #include <cstring>
 #include <math.h>
