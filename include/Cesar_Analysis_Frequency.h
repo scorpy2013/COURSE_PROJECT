@@ -10,6 +10,8 @@
 #include <vector>
 #include <iomanip>
 #include <algorithm>
+#include <thread>
+#include <chrono>
 
 using namespace std;
 
@@ -27,8 +29,8 @@ void Cesar_Analysis_Frequency() {
     vector<Frequency> frequency;
     vector<Frequency> frequency_of_english_symbols;
     int number;
-    string str1;
-    char str[100],en_str[100];
+    string button;
+    char str[100];
     //===========================================================================
     // подготовка таблицы частотных характеристик символов в английском алфавите
     //===========================================================================
@@ -71,7 +73,6 @@ void Cesar_Analysis_Frequency() {
     if (strlen(str) > 100)
         throw "Your string has too big length!!!";
     for (size_t i = 0; i < strlen(str); i++) {
-        en_str[i]=str[i];
         if (str[i] < 65 || str[i] > 90)
             throw "Code of your symbols must be in this range -> [65,90] !!!";
     }
@@ -80,12 +81,12 @@ void Cesar_Analysis_Frequency() {
     cin >> number;
     if (number < 1 || number > 36)
         throw "Your number must be in this range -> [1, 36] !!!";
-    for (int i = 0; (i < 100 && en_str[i] != '\0'); i++)
-        en_str[i] = en_str[i] + number;
+    for (int i = 0; (i < 100 && str[i] != '\0'); i++)
+        str[i] = str[i] + number;
     cout << "Encrypted string: " << str << endl;
     for (size_t i = 0; i < strlen(str); i++) {
         for (size_t j = 0; j < 62; j++) {
-            if (frequency[j].symbol == en_str[i]) {
+            if (frequency[j].symbol == str[i]) {
                 frequency[j].kol++;
                 frequency[j].frequency = frequency[j].kol / strlen(str) * 100;
             }
@@ -95,6 +96,7 @@ void Cesar_Analysis_Frequency() {
     sort(frequency.begin(), frequency.end());
     sort(frequency_of_english_symbols.begin(),
          frequency_of_english_symbols.end());
+    std::this_thread::sleep_for(std::chrono::seconds(2));
     cout << "================================================================="
             "=========" << endl;
     cout << "|Frequency of symbols in your string||    Frequency of english sy"
@@ -119,9 +121,10 @@ void Cesar_Analysis_Frequency() {
     }
     cout << "================================================================="
             "=========" << endl << endl;
-    cout << "If you want to continue, press <YES>." << endl;
-    cin >> str1;
-    if (str1 == "YES") {
+    std::this_thread::sleep_for(std::chrono::seconds(2));
+    cout << "If you want to continue, press <<YES>>." << endl;
+    cin >> button;
+    if (button == "YES") {
         cout << "===========================================" << endl;
         cout << "|SYMBOLS OF THE BIGGEST VALUE OF FREQUENCY|" << endl;
         cout << "===========================================" << endl;
@@ -130,9 +133,11 @@ void Cesar_Analysis_Frequency() {
         cout << "===========================================" << endl;
         cout << "KEY is " << int(frequency[0].symbol) -
         int(frequency_of_english_symbols[0].symbol) << endl;
-        for (int i = 0; (i < 100 && en_str[i] != '\0'); i++)
-            en_str[i] = en_str[i] - number;
-        if (strcmp(str,en_str)==0) {
+        for (int i = 0; (i < 100 && str[i] != '\0'); i++)
+            str[i] = str[i] - number;
+        std::this_thread::sleep_for(std::chrono::seconds(2));
+        if ((int(frequency[0].symbol) -
+            int(frequency_of_english_symbols[0].symbol)) == number) {
             cout << "HACKED MESSAGE: " << str << endl;
             cout << "                     ---------------------------" << endl;
             cout << "     =========>      |CESAR CIPHER IS UNSTABLE!|      <=="
@@ -140,7 +145,7 @@ void Cesar_Analysis_Frequency() {
             cout << "                     ---------------------------"
             << endl;
         }else {
-            cout << "Input symbols are not correct, because this cipher can be"
+            cout << "Input symbols are wrong, because this cipher can be"
                     " hacked in any case!" << endl;
             cout << "Your string is too short, because of this a table of freq"
                     "uency is not correct..." << endl;

@@ -83,10 +83,10 @@ void Gamma_Analysis() {
         cout << "Time for hacking: " << search_time << " milliseconds (" << search_time / 1000 << " seconds)" << endl;
         cout << "This cipher can't be hacked!" << endl;
         cout << "                     ---------------------------------------" << endl;
-        cout << "     =========>      |GAMMING CIPHER HAS A HIGH RESISTANCE!|      <=========" << endl;
+        cout << "     =========>      |  ABSOLUTE CRYPTOGRAPHIC STRENGTH!!! |      <=========" << endl;
         cout << "                     ---------------------------------------" << endl;
     }
     delete[] key;
 }
-
+// absolute cryptographic strength
 #endif //CURSE_CODE_GAMMA_ANALYSIS_H

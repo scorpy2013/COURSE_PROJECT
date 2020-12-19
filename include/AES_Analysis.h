@@ -15,7 +15,8 @@
 #define BUFF_SIZE 1024
 using namespace std;
 
-char const *pCharset = "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
+char const *pCharset = "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTU"
+                       "VWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
 
 void random_key(uint8_t key[KEY_SIZE]) {
     cout << "[ ";
@@ -86,11 +87,23 @@ void AES_Analysis() {
         }
         end_time = clock(); // конечное время
         search_time = end_time - start_time; // искомое время
-        cout << "Time for hacking: " << search_time << " milliseconds (" << search_time / 1000 << " seconds)" << endl;
-        cout << "This cipher can't be hacked!" << endl;
-        cout << "                     -----------------------------------" << endl;
-        cout << "     =========>      |AES CIPHER HAS A HIGH RESISTANCE!|      <=========" << endl;
-        cout << "                     -----------------------------------" << endl;
+        cout << "This cipher was hacked!" << endl;
+        cout << "Your  key ===> [" << key <<"]" << endl;
+        cout << "Decrypted string: " << endl;
+        cout << "[ ";
+        for (size_t i = 0; i < str.size(); i++)
+            cout << int(decrypted[i]) << " ";
+        for (size_t i = 0; i < length - str.size(); i++)
+            cout << "0" << " ";
+        cout << "]" << endl;
+        cout << "Time for hacking: " << search_time << " milliseconds ("
+        << search_time / 1000 << " seconds)" << endl;
+        cout << "                     -----------------------------------------"
+        << endl;
+        cout << "     =========>      |AES CIPHER HAS AN ESTIMATED RESISTANCE!|     "
+                " <=========" << endl;
+        cout << "                     -----------------------------------------"
+        << endl;
     }
 
 }

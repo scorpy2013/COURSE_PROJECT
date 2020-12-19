@@ -33,7 +33,7 @@ int main() {
     cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
             "||||||||||||||||||||||||||||" << endl;
     cout << "|                                  CRYPTOANALYSIS SYSTEM    "
-            "      |" << endl;
+            "                               |" << endl;
     cout << "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
             "|||||||||||||||||||||||||||||" << endl;
     cout << "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
@@ -51,7 +51,7 @@ int main() {
         cout << "|----->                        (2)Cryptoanalysis of Cesar cip"
                 "her;                    <-----|" << endl;
         cout << "|----->                        (3)Gamming cipher;            "
-                "                         <-----|" << endl;
+                "                        <-----|" << endl;
         cout << "|----->                        (4)Cryptoanalysis of Gamming c"
                 "ipher;                  <-----|" << endl;
         cout << "|----->                        (5)Vernam cipher;             "
@@ -208,6 +208,8 @@ int main() {
                 endl;
                 cout << "              THE METHOD OF COMPLETE ENUMERATION + SI"
                         "DE-CHANNEL ATTACK" << endl;
+                cout << "                        + THE METOD, BASED ON INSECUR"
+                        "E KEY STORAGE" << endl;
                 cout << "-----------------------------------------------------"
                         "--------------------------------------"
                      << endl;
@@ -242,6 +244,8 @@ int main() {
                 endl;
                 cout << "              THE METHOD OF COMPLETE ENUMERATION + SI"
                         "DE-CHANNEL ATTACK" << endl;
+                cout << "                        + THE METOD, BASED ON INSECUR"
+                        "E KEY STORAGE" << endl;
                 cout << "-----------------------------------------------------"
                         "--------------------------------------"
                      << endl;
@@ -310,6 +314,8 @@ int main() {
                 endl;
                 cout << "              THE METHOD OF COMPLETE ENUMERATION + SI"
                         "DE-CHANNEL ATTACK" << endl;
+                cout << "                        + THE METOD, BASED ON INSECUR"
+                        "E KEY STORAGE" << endl;
                 cout << "-----------------------------------------------------"
                         "--------------------------------------"
                      << endl;

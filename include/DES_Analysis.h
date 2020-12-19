@@ -77,9 +77,9 @@ void DES_Analysis() {
         search_time = end_time - start_time; // искомое время
         cout << "Time for hacking: " << search_time << " milliseconds (" << search_time / 1000 << " seconds)" << endl;
         cout << "This cipher can't be hacked!" << endl;
-        cout << "                     -------------------------------------------------" << endl;
-        cout << "     =========>      |DES CIPHER HAS THE AVERAGE ENCRYPTION STRENGTH!|      <=========" << endl;
-        cout << "                     -------------------------------------------------" << endl;
+        cout << "                     ---------------------------------------" << endl;
+        cout << "     =========>      |DES CIPHER HAS A PROVABLE RESISTANCE!|      <=========" << endl;
+        cout << "                     ---------------------------------------" << endl;
     }
 }
 

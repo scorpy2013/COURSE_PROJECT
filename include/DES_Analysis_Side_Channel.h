@@ -8,12 +8,15 @@
 #define BUFF_SIZE 1024
 #include <iostream>
 #include "DES_Cipher.h"
+#include "Secret_Key.h"
+#include <thread>         // std::this_thread::sleep_for
+#include <chrono>         // std::chrono::seconds
 
 using namespace std;
 
 void DES_Analysis_Side_Channel() {
     string button;
-    string str, STR;
+    string str, KEY;
     uint8_t encrypted[BUFF_SIZE], decrypted[BUFF_SIZE];
     uint8_t buffer[BUFF_SIZE] = {0};
     uint8_t keys8b[8] = "Key56bt";
@@ -49,28 +52,36 @@ void DES_Analysis_Side_Channel() {
     cout << "Write <<YES>> if you want to make a cryptoanalysis." << endl;
     cin >> button;
     if (button == "YES") {
-        cout << "You key was stolen by hackers!" << endl;
+        for (int i=0; i<8;i++)
+            KEY.push_back(char(keys8b[i]));
+        Secret_Key secret_key(KEY);
+        std::this_thread::sleep_for(std::chrono::seconds(2));
+        cout << "      ======================================" << endl;
+        cout << "      | Your key was hidden in this picture|" << endl;
+        cout << "      ======================================" << endl;
+        std::this_thread::sleep_for(std::chrono::seconds(2));
+        secret_key.Print_Key8b();
+        std::this_thread::sleep_for(std::chrono::seconds(2));
+        cout << "Your key was stolen by hackers, because transfer channel has "
+                "been hacked!!!" << endl;
         cout << "Your key is [" << keys8b << "]." << endl;
             cout << "Decrypted string: " << endl;
             length = DES(decrypted, 'D', keys8b, encrypted, length);
             cout << "[ ";
             for (size_t i = 0; i < str.size(); i++) {
-                STR.push_back(decrypted[i]);
                 cout << int(decrypted[i]) << " ";
             }
             for (size_t i = 0; i < length - str.size(); i++)
                 cout << "0" << " ";
             cout << "]" << endl;
             cout << endl;
-            STR.clear();
-        }
+        std::this_thread::sleep_for(std::chrono::seconds(2));
         cout << "This cipher was hacked! However..." << endl;
-        cout << "                     ----------------------------------------"
-                "---------" << endl;
-        cout << "     =========>      |DES CIPHER HAS THE AVERAGE ENCRYPTION S"
-                "TRENGTH!|      <=========" << endl;
-        cout << "                     ----------------------------------------"
-                "---------" << endl;
+        cout << "                     ---------------------------------------" << endl;
+        cout << "     =========>      |DES CIPHER HAS A PROVABLE RESISTANCE!|      <=========" << endl;
+        cout << "                     ---------------------------------------" << endl;
+        }
+
     }
 
 #endif //TEMPLATE_DES_ANALYSIS_SIDE_CHANNEL_H

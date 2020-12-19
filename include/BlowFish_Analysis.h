@@ -47,7 +47,7 @@ void BlowFish_Analysis() {
     cin >> button;
     if (button == "YES") {
         start_time = clock(); // начальное время
-        while (str != STR && I < 99999) {
+        while (str != STR && I < 49999) {
             cout << I + 1 << ") ITERATION:" << endl;
             random_key(key64b);
             BF_key_extension(__Keys32b, key64b, 448);

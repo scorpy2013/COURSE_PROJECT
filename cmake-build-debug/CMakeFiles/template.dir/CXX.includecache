@@ -27,8 +27,14 @@ cstring
 -
 iostream
 -
+thread
+-
+chrono
+-
 AES_Cipher.h
 ../include/AES_Cipher.h
+Secret_Key.h
+../include/Secret_Key.h
 
 ../include/AES_Cipher.h
 cstdio
@@ -41,10 +47,16 @@ cstring
 ../include/BlowFish_Analysis.h
 
 ../include/BlowFish_Analysis_Side_Channel.h
+thread
+-
+chrono
+-
 iostream
 -
 BlowFish_Cipher.h
 ../include/BlowFish_Cipher.h
+Secret_Key.h
+../include/Secret_Key.h
 
 ../include/BlowFish_Cipher.h
 cstdio
@@ -77,6 +89,10 @@ iomanip
 -
 algorithm
 -
+thread
+-
+chrono
+-
 
 ../include/Cesar_Cipher.h
 iostream
@@ -97,6 +113,12 @@ iostream
 -
 DES_Cipher.h
 ../include/DES_Cipher.h
+Secret_Key.h
+../include/Secret_Key.h
+thread
+-
+chrono
+-
 
 ../include/DES_Cipher.h
 stdio.h
@@ -125,6 +147,12 @@ cstring
 -
 Gamma_Cipher.h
 ../include/Gamma_Cipher.h
+Long_Secret_Key.h
+../include/Long_Secret_Key.h
+thread
+-
+chrono
+-
 
 ../include/Gamma_Cipher.h
 string
@@ -134,6 +162,12 @@ iostream
 vector
 -
 cstring
+-
+
+../include/Long_Secret_Key.h
+iostream
+-
+vector
 -
 
 ../include/RSA_Analysis.h
@@ -155,6 +189,12 @@ iostream
 -
 string
 -
+Secret_Key.h
+../include/Secret_Key.h
+thread
+-
+chrono
+-
 
 ../include/RSA_Cipher.h
 string
@@ -168,6 +208,14 @@ ctime
 cstdlib
 -
 iomanip
+-
+
+../include/Secret_Key.h
+iostream
+-
+vector
+-
+string
 -
 
 ../include/Vernam_Analysis.h
@@ -189,6 +237,12 @@ iostream
 -
 Gamma_Cipher.h
 ../include/Gamma_Cipher.h
+Long_Secret_Key.h
+../include/Long_Secret_Key.h
+thread
+-
+chrono
+-
 
 ../include/Vernam_Cipher.h
 string

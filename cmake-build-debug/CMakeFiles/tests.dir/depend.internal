@@ -17,9 +17,11 @@ CMakeFiles/tests.dir/sources/main.cpp.o
  ../include/Gamma_Analysis.h
  ../include/Gamma_Analysis_Side_Channel.h
  ../include/Gamma_Cipher.h
+ ../include/Long_Secret_Key.h
  ../include/RSA_Analysis.h
  ../include/RSA_Analysis_Side_Channel.h
  ../include/RSA_Cipher.h
+ ../include/Secret_Key.h
  ../include/Vernam_Analysis.h
  ../include/Vernam_Analysis_Side_Channel.h
  ../include/Vernam_Cipher.h

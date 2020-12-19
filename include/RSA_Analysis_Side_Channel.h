@@ -7,6 +7,9 @@
 
 #include <iostream>
 #include <string>
+#include "Secret_Key.h"
+#include <thread>         // std::this_thread::sleep_for
+#include <chrono>         // std::chrono::seconds
 
 using namespace std;
 
@@ -20,7 +23,7 @@ void RSA_Cipher_Analysis_Side_Channel() {
     int p_simple = random_simple(p);
     int q_simple = random_simple(q);
     int Euler = (p_simple - 1) * (q_simple - 1);
-    unsigned int n = p_simple * q_simple;
+    int n = p_simple * q_simple;
 // НОД [d , (p_simple-1)*(q_simple-1)] = 1
     int d, d_simple = 0;
     while (d_simple != 1) {
@@ -28,7 +31,7 @@ void RSA_Cipher_Analysis_Side_Channel() {
         d_simple = NOD(d, ((p_simple - 1) * (q_simple - 1)));
     }
 //с(e*d)%((p_simple-1)*(q_simple-1))=1
-    unsigned int e = 0, e_simple = 0;
+    int e = 0, e_simple = 0;
     while (e_simple != 1) {
         e += 1;
         e_simple = (e * d) % ((p_simple - 1) * (q_simple - 1));
@@ -67,7 +70,7 @@ void RSA_Cipher_Analysis_Side_Channel() {
             "---------" << endl;
     for (size_t j = 0; j < str.size(); j++) {
         c = 1;
-        unsigned int i = 0;
+        int i = 0;
         int ASCIIcode = (static_cast<int>(Text[j])) + b;
         while (i < e) {
             c = c * ASCIIcode;
@@ -113,7 +116,20 @@ void RSA_Cipher_Analysis_Side_Channel() {
     cout << "Write <<YES>> if you want to make a cryptoanalysis." << endl;
     cin >> button;
     if (button == "YES") {
-        cout << "Your private key was stolen by hackers!" << endl;
+        string Test_Key="test_key";
+        Secret_Key secret_key(Test_Key);
+        std::this_thread::sleep_for(std::chrono::seconds(2));
+        cout << "      ======================================" << endl;
+        cout << "      | Your key was hidden in this picture|" << endl;
+        cout << "      ======================================" << endl;
+        std::this_thread::sleep_for(std::chrono::seconds(2));
+        secret_key.Print_RSA_Key(d,n,e);
+        cout << "Your private key was stolen by hackers, because transfer chan"
+                "nel has been hacked!!!" << endl;
+        cout << "Open key ===> " << "{e,n} <=> " << "{" << e << "," << n << "}"
+             << endl;
+        cout << "Secret key ===> " << "{d,n} <=> " << "{" << d << "," << n << "}"
+             << endl;
         cout << "Hacked message: " << endl;
         for (size_t j = 0; j < str.size(); j++) {
             if (Text[j] != '\0')
@@ -121,13 +137,11 @@ void RSA_Cipher_Analysis_Side_Channel() {
             else cout << " ";
         }
         cout << endl;
+        std::this_thread::sleep_for(std::chrono::seconds(2));
         cout << "This cipher was hacked! However..." << endl;
-        cout << "                     -----------------------------------"
-        << endl;
-        cout << "     =========>      |RSA CIPHER HAS A HIGH RESISTANCE!|     "
-                " <=========" << endl;
-        cout << "                     -----------------------------------"
-        << endl;
+        cout << "                     ---------------------------------------" << endl;
+        cout << "     =========>      |RSA CIPHER HAS A PROVABLE RESISTANCE!|      <=========" << endl;
+        cout << "                     ---------------------------------------" << endl;
     }
     delete[] Text;
     delete[] CryptoText;
