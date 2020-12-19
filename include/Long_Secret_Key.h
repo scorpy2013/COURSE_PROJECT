@@ -15,8 +15,11 @@ private:
     string key;
 public:
     Long_Secret_Key(string KEY) : key(KEY) {
-        for (size_t i = 0; i < key.size(); i++)
+        for (size_t i = 0; i < key.size(); i++){
+            secret_key.push_back(rand()%1000);
             secret_key.push_back(int(key[i]));
+            secret_key.push_back(rand()%1000);
+        }
     }
     void Print_Long_Key() {
         for (size_t i = 0; i < secret_key.size(); i++)

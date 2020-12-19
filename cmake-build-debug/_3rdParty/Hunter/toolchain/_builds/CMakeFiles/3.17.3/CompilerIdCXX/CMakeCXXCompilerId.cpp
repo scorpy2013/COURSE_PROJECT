@@ -606,7 +606,6 @@ char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";
 
 
 
-
 #if defined(__INTEL_COMPILER) && defined(_MSVC_LANG) && _MSVC_LANG < 201403L
 #  if defined(__INTEL_CXX11_MODE__)
 #    if defined(__cpp_aggregate_nsdmi)
