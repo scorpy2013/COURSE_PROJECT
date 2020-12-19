@@ -572,10 +572,10 @@ char const info_version[] = {
 /* Construct a string literal encoding the internal version number. */
 #ifdef COMPILER_VERSION_INTERNAL
 char const info_version_internal[] = {
-  'I', 'N', 'F', 'O', ':',
-  'c','o','m','p','i','l','e','r','_','v','e','r','s','i','o','n','_',
-  'i','n','t','e','r','n','a','l','[',
-  COMPILER_VERSION_INTERNAL,']','\0'};
+  'I' , 'N' , 'F' , 'O' , ':' , 'c' , 'o' , 'm' , 'p' , 'i' , 'l' , 'e' , 'r' ,
+  '_' , 'v' , 'e' , 'r' , 's' , 'i' , 'o' , 'n' , '_' , 'i' , 'n' , 't' , 'e' ,
+  'r' , 'n' , 'a' , 'l' , '[' ,
+  COMPILER_VERSION_INTERNAL, ']' , '\0'};
 #endif
 
 /* Construct a string literal encoding the version number components. */
