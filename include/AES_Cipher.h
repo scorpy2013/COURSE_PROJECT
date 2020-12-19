@@ -399,14 +399,15 @@ void AES_Cipher() {
     length = AES(decrypted, 'D', key, KEY_SIZE, encrypted, length);
     cout << "[ ";
     for (size_t i = 0; i < str.size(); i++)
-        cout << decrypted[i] << " ";
-    cout << "]" << endl;
-    cout << "[ ";
-    for (size_t i = 0; i < str.size(); i++)
         cout << int(decrypted[i]) << " ";
     for (size_t i = 0; i < length - str.size(); i++)
         cout << "0" << " ";
     cout << "]" << endl;
+    cout << "[ ";
+    for (size_t i = 0; i < str.size(); i++)
+        cout << char(decrypted[i]) << " ";
+    cout << "]" << endl;
+    cout << endl;
 }
 
 #endif //CURSE_PROJECT_AES_CIPHER_H

@@ -63,6 +63,11 @@ void AES_Analysis() {
     for (size_t i = 0; i < length - str.size(); i++)
         cout << "0" << " ";
     cout << "]" << endl;
+    cout << "[ ";
+    for (size_t i = 0; i < str.size(); i++)
+        cout << char(decrypted[i]) << " ";
+    cout << "]" << endl;
+    cout << endl;
 
     cout << "Do you want to hack this cipher???" << endl;
     cout << "Write <<yes>> or <<y>> if you want to make a cryptoanalysis." << endl;
@@ -90,12 +95,17 @@ void AES_Analysis() {
         search_time = end_time - start_time; // искомое время
         cout << "This cipher was hacked!" << endl;
         cout << "Your  key ===> [" << KEY <<"]" << endl;
+        length = AES(decrypted, 'D', KEY, KEY_SIZE, encrypted, length);
         cout << "Decrypted string: " << endl;
         cout << "[ ";
         for (size_t i = 0; i < str.size(); i++)
             cout << int(decrypted[i]) << " ";
         for (size_t i = 0; i < length - str.size(); i++)
             cout << "0" << " ";
+        cout << "]" << endl;
+        cout << "[ ";
+        for (size_t i = 0; i < str.size(); i++)
+            cout << char(decrypted[i]) << " ";
         cout << "]" << endl;
         cout << "Time for hacking: " << search_time << " milliseconds ("
         << search_time / 1000 << " seconds)" << endl;

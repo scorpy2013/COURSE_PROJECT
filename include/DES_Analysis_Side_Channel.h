@@ -47,6 +47,11 @@ void DES_Analysis_Side_Channel() {
     for (size_t i = 0; i < length - str.size(); i++)
         cout << "0" << " ";
     cout << "]" << endl;
+    cout << "[ ";
+    for (size_t i = 0; i < str.size(); i++)
+        cout << char(decrypted[i]) << " ";
+    cout << "]" << endl;
+    cout << endl;
 
     cout << "Do you want to hack this cipher???" << endl;
     cout << "Write <<yes>> or <<y>> if you want to make a cryptoanalysis." << endl;
@@ -67,14 +72,17 @@ void DES_Analysis_Side_Channel() {
         cout << "Your key is [" << keys8b << "]." << endl;
             cout << "Decrypted string: " << endl;
             length = DES(decrypted, 'D', keys8b, encrypted, length);
-            cout << "[ ";
-            for (size_t i = 0; i < str.size(); i++) {
-                cout << int(decrypted[i]) << " ";
-            }
-            for (size_t i = 0; i < length - str.size(); i++)
-                cout << "0" << " ";
-            cout << "]" << endl;
-            cout << endl;
+        cout << "[ ";
+        for (size_t i = 0; i < str.size(); i++)
+            cout << int(decrypted[i]) << " ";
+        for (size_t i = 0; i < length - str.size(); i++)
+            cout << "0" << " ";
+        cout << "]" << endl;
+        cout << "[ ";
+        for (size_t i = 0; i < str.size(); i++)
+            cout << char(decrypted[i]) << " ";
+        cout << "]" << endl;
+        cout << endl;
         std::this_thread::sleep_for(std::chrono::seconds(2));
         cout << "This cipher was hacked! However..." << endl;
         cout << "                     ---------------------------------------" << endl;

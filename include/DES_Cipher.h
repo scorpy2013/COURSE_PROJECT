@@ -186,9 +186,15 @@ void DES_Cipher() {
     length = DES(decrypted, 'D', keys8b, encrypted, length);
     cout << "[ ";
     for (size_t i = 0; i < str.size(); i++)
-        cout << decrypted[i] << " ";
+        cout << int(decrypted[i]) << " ";
+    for (size_t i = 0; i < length - str.size(); i++)
+        cout << "0" << " ";
     cout << "]" << endl;
-    print_array(decrypted, length);
+    cout << "[ ";
+    for (size_t i = 0; i < str.size(); i++)
+        cout << char(decrypted[i]) << " ";
+    cout << "]" << endl;
+    cout << endl;
 }
 
 size_t DES(uint8_t *to, uint8_t mode, uint8_t *keys8b, uint8_t *from, size_t length) {

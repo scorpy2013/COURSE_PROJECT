@@ -49,6 +49,11 @@ void AES_Analysis_Side_Channel() {
     for (size_t i = 0; i < length - str.size(); i++)
         cout << "0" << " ";
     cout << "]" << endl;
+    cout << "[ ";
+    for (size_t i = 0; i < str.size(); i++)
+        cout << char(decrypted[i]) << " ";
+    cout << "]" << endl;
+    cout << endl;
     cout << "Do you want to hack this cipher???" << endl;
     cout << "Write <<yes>> or <<y>> if you want to make a cryptoanalysis." << endl;
     cin >> button;
@@ -69,11 +74,14 @@ void AES_Analysis_Side_Channel() {
         cout << "Decrypted string: " << endl;
         length = AES(decrypted, 'D', key, KEY_SIZE, encrypted, length);
         cout << "[ ";
-        for (size_t i = 0; i < str.size(); i++) {
+        for (size_t i = 0; i < str.size(); i++)
             cout << int(decrypted[i]) << " ";
-        }
         for (size_t i = 0; i < length - str.size(); i++)
             cout << "0" << " ";
+        cout << "]" << endl;
+        cout << "[ ";
+        for (size_t i = 0; i < str.size(); i++)
+            cout << char(decrypted[i]) << " ";
         cout << "]" << endl;
         cout << endl;
         std::this_thread::sleep_for(std::chrono::seconds(2));

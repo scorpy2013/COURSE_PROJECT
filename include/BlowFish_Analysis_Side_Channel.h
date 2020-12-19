@@ -49,6 +49,10 @@ void BlowFish_Analysis_Side_Channel() {
     for (size_t i = 0; i < length - str.size(); i++)
         cout << "0" << " ";
     cout << "]" << endl;
+    cout << "[ ";
+    for (size_t i = 0; i < str.size(); i++)
+        cout << char(decrypted[i]) << " ";
+    cout << "]" << endl;
     cout << "Do you want to hack this cipher???" << endl;
     cout << "Write <<yes>> or <<y>> if you want to make a cryptoanalysis." << endl;
     cin >> button;
@@ -66,15 +70,16 @@ void BlowFish_Analysis_Side_Channel() {
         cout << "Your key was stolen by hackers, because transfer channel has "
                 "been hacked!!!" << endl;
         cout << "Your key is [" << key64b << "]." << endl;
-        BF_key_extension(__Keys32b, key64b, 448);
         cout << "Decrypted string: " << endl;
-        length = blowfish(decrypted, 'D', __Keys32b, encrypted, length);
         cout << "[ ";
-        for (size_t i = 0; i < str.size(); i++) {
+        for (size_t i = 0; i < str.size(); i++)
             cout << int(decrypted[i]) << " ";
-        }
         for (size_t i = 0; i < length - str.size(); i++)
             cout << "0" << " ";
+        cout << "]" << endl;
+        cout << "[ ";
+        for (size_t i = 0; i < str.size(); i++)
+            cout << char(decrypted[i]) << " ";
         cout << "]" << endl;
         cout << endl;
         std::this_thread::sleep_for(std::chrono::seconds(2));

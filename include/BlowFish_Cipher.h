@@ -259,14 +259,15 @@ void BlowFish_Cipher() {
     length = blowfish(decrypted, 'D', __Keys32b, encrypted, length);
     cout << "[ ";
     for (size_t i = 0; i < str.size(); i++)
-        cout << decrypted[i] << " ";
-    cout << "]" << endl;
-    cout << "[ ";
-    for (size_t i = 0; i < str.size(); i++)
         cout << int(decrypted[i]) << " ";
     for (size_t i = 0; i < length - str.size(); i++)
         cout << "0" << " ";
     cout << "]" << endl;
+    cout << "[ ";
+    for (size_t i = 0; i < str.size(); i++)
+        cout << char(decrypted[i]) << " ";
+    cout << "]" << endl;
+    cout << endl;
 }
 
 void BF_key_extension(uint32_t *keys32b, uint8_t *keyNb, uint16_t len_bits) {
