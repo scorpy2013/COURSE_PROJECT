@@ -52,9 +52,9 @@ void DES_Analysis() {
     cout << "]" << endl;
 
     cout << "Do you want to hack this cipher???" << endl;
-    cout << "Write <<YES>> if you want to make a cryptoanalysis." << endl;
+    cout << "Write <<yes>> or <<y>> if you want to make a cryptoanalysis." << endl;
     cin >> button;
-    if (button == "YES") {
+    if (button == "yes" || button == "y") {
         start_time = clock(); // начальное время
         while (str != STR && I < 99999) {
             cout << I + 1 << ") ITERATION:" << endl;

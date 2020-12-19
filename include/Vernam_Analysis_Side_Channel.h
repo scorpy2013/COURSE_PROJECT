@@ -37,9 +37,9 @@ void Vernam_Analysis_Side_channel() {
     cout << "Encrypted string: ";
     cout << rez << endl;
     cout << "Do you want to hack this cipher???" << endl;
-    cout << "Write <<YES>> if you want to make a cryptoanalysis." << endl;
+    cout << "Write <<yes>> or <<y>> if you want to make a cryptoanalysis." << endl;
     cin >> button;
-    if (button == "YES") {
+    if (button == "yes" || button == "y") {
         Long_Secret_Key secret_key(gamma);
         std::this_thread::sleep_for(std::chrono::seconds(2));
         cout << "======================================" << endl;

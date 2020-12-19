@@ -36,6 +36,7 @@ void AES_Analysis() {
     uint8_t decrypted[BUFF_SIZE] = {0};
     uint8_t buffer[BUFF_SIZE];
     uint8_t key[KEY_SIZE] = "Key_is_128_bits";
+    uint8_t KEY[KEY_SIZE] = "Key_is_128_bits";
     cout << "You can use these symbols:" << endl;
     for (int i = 33; i <= 126; i++) {
         cout << char(i) << " ";
@@ -64,9 +65,9 @@ void AES_Analysis() {
     cout << "]" << endl;
 
     cout << "Do you want to hack this cipher???" << endl;
-    cout << "Write <<YES>> if you want to make a cryptoanalysis." << endl;
+    cout << "Write <<yes>> or <<y>> if you want to make a cryptoanalysis." << endl;
     cin >> button;
-    if (button == "YES") {
+    if (button == "yes" || button == "y") {
         start_time = clock(); // начальное время
         while (str != STR && I < 99999) {
             cout << I + 1 << ") ITERATION:" << endl;
@@ -88,7 +89,7 @@ void AES_Analysis() {
         end_time = clock(); // конечное время
         search_time = end_time - start_time; // искомое время
         cout << "This cipher was hacked!" << endl;
-        cout << "Your  key ===> [" << key <<"]" << endl;
+        cout << "Your  key ===> [" << KEY <<"]" << endl;
         cout << "Decrypted string: " << endl;
         cout << "[ ";
         for (size_t i = 0; i < str.size(); i++)

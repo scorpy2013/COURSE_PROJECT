@@ -113,9 +113,9 @@ void RSA_Cipher_Analysis_Side_Channel() {
     cout << "-----------------------------------------------------------------"
             "---------" << endl;
     cout << "Do you want to hack this cipher???" << endl;
-    cout << "Write <<YES>> if you want to make a cryptoanalysis." << endl;
+    cout << "Write <<yes>> or <<y>> if you want to make a cryptoanalysis." << endl;
     cin >> button;
-    if (button == "YES") {
+    if (button == "yes" || button == "y") {
         string Test_Key="test_key";
         Secret_Key secret_key(Test_Key);
         std::this_thread::sleep_for(std::chrono::seconds(2));

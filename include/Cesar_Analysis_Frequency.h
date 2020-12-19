@@ -122,9 +122,9 @@ void Cesar_Analysis_Frequency() {
     cout << "================================================================="
             "=========" << endl << endl;
     std::this_thread::sleep_for(std::chrono::seconds(2));
-    cout << "If you want to continue, press <<YES>>." << endl;
+    cout << "If you want to continue, press <<yes>> or <<y>>." << endl;
     cin >> button;
-    if (button == "YES") {
+    if (button == "yes" || button == "y") {
         cout << "===========================================" << endl;
         cout << "|SYMBOLS OF THE BIGGEST VALUE OF FREQUENCY|" << endl;
         cout << "===========================================" << endl;

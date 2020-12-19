@@ -50,9 +50,9 @@ void AES_Analysis_Side_Channel() {
         cout << "0" << " ";
     cout << "]" << endl;
     cout << "Do you want to hack this cipher???" << endl;
-    cout << "Write <<YES>> if you want to make a cryptoanalysis." << endl;
+    cout << "Write <<yes>> or <<y>> if you want to make a cryptoanalysis." << endl;
     cin >> button;
-    if (button == "YES") {
+    if (button == "yes" || button == "y") {
         for (int i=0; i<KEY_SIZE;i++)
             KEY.push_back(char(key[i]));
         Secret_Key secret_key(KEY);
