@@ -129,7 +129,7 @@ int main() {
                 break;
             case 4:
                 cout << "                            CRYPTOANALYSIS OF GAMMING"
-                        " CIPHER" << endl;
+                        "CIPHER" << endl;
                 cout << "                                           ||" <<
                 endl;
                 cout << "                                           ||" <<
@@ -138,8 +138,8 @@ int main() {
                 endl;
                 cout << "                                           ||" <<
                 endl;
-                cout << "              THE METHOD OF COMPLETE ENUMERATION + SI"
-                        "DE-CHANNEL ATTACK" << endl;
+                cout << "                            KEY ATTACK + SIDE-CHANNEL"
+                        " ATTACK" << endl;
                 cout << "-----------------------------------------------------"
                         "--------------------------------------"
                      << endl;
@@ -172,8 +172,8 @@ int main() {
                 endl;
                 cout << "                                           ||" <<
                 endl;
-                cout << "              THE METHOD OF COMPLETE ENUMERATION + SI"
-                        "DE-CHANNEL ATTACK" << endl;
+                cout << "                            KEY ATTACK + SIDE-CHANNEL"
+                        " ATTACK" << endl;
                 cout << "-----------------------------------------------------"
                         "--------------------------------------"
                      << endl;
@@ -206,10 +206,8 @@ int main() {
                 endl;
                 cout << "                                           ||" <<
                 endl;
-                cout << "              THE METHOD OF COMPLETE ENUMERATION + SI"
-                        "DE-CHANNEL ATTACK" << endl;
-                cout << "                        + THE METOD, BASED ON INSECUR"
-                        "E KEY STORAGE" << endl;
+                cout << "                            KEY ATTACK + SIDE-CHANNEL"
+                        " ATTACK" << endl;
                 cout << "-----------------------------------------------------"
                         "--------------------------------------"
                      << endl;
@@ -242,10 +240,8 @@ int main() {
                 endl;
                 cout << "                                           ||" <<
                 endl;
-                cout << "              THE METHOD OF COMPLETE ENUMERATION + SI"
-                        "DE-CHANNEL ATTACK" << endl;
-                cout << "                        + THE METOD, BASED ON INSECUR"
-                        "E KEY STORAGE" << endl;
+                cout << "                            KEY ATTACK + SIDE-CHANNEL"
+                        " ATTACK" << endl;
                 cout << "-----------------------------------------------------"
                         "--------------------------------------"
                      << endl;
@@ -278,8 +274,8 @@ int main() {
                 endl;
                 cout << "                                           ||" <<
                 endl;
-                cout << "              THE METHOD OF COMPLETE ENUMERATION + SI"
-                        "DE-CHANNEL ATTACK" << endl;
+                cout << "                            KEY ATTACK + SIDE-CHANNEL"
+                        " ATTACK" << endl;
                 cout << "-----------------------------------------------------"
                         "--------------------------------------"
                      << endl;
@@ -312,10 +308,8 @@ int main() {
                 endl;
                 cout << "                                           ||" <<
                 endl;
-                cout << "              THE METHOD OF COMPLETE ENUMERATION + SI"
-                        "DE-CHANNEL ATTACK" << endl;
-                cout << "                        + THE METOD, BASED ON INSECUR"
-                        "E KEY STORAGE" << endl;
+                cout << "                            KEY ATTACK + SIDE-CHANNEL"
+                        " ATTACK" << endl;
                 cout << "-----------------------------------------------------"
                         "--------------------------------------"
                      << endl;
