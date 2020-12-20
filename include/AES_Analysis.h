@@ -109,11 +109,11 @@ void AES_Analysis() {
         cout << "]" << endl;
         cout << "Time for hacking: " << search_time << " milliseconds ("
         << search_time / 1000 << " seconds)" << endl;
-        cout << "                     -----------------------------------------"
+        cout << "                     ------------------------- ----------------"
         << endl;
-        cout << "     =========>      |AES CIPHER HAS AN ESTIMATED RESISTANCE!|     "
+        cout << "     =========>      |AES CIPHER HAS A CALCULATING RESISTANCE!|     "
                 " <=========" << endl;
-        cout << "                     -----------------------------------------"
+        cout << "                     -------------------------- ---------------"
         << endl;
     }
 

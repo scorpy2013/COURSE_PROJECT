@@ -85,9 +85,9 @@ void DES_Analysis_Side_Channel() {
         cout << endl;
         std::this_thread::sleep_for(std::chrono::seconds(2));
         cout << "This cipher was hacked! However..." << endl;
-        cout << "                     ---------------------------------------" << endl;
-        cout << "     =========>      |DES CIPHER HAS A PROVABLE RESISTANCE!|      <=========" << endl;
-        cout << "                     ---------------------------------------" << endl;
+        cout << "                     ------------------------------------------" << endl;
+        cout << "     =========>      |DES CIPHER HAS A CALCULATING RESISTANCE!|      <=========" << endl;
+        cout << "                     ------------------------------------------" << endl;
         }
 
     }

@@ -148,6 +148,8 @@
 		</Build>
 		<Unit filename="/home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/sources/main.cpp">
 			<Option target="template"/>
+		</Unit>
+		<Unit filename="/home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/tests/test.cpp">
 			<Option target="tests"/>
 		</Unit>
 		<Unit filename="/home/alexscorpy/Документы/Курсовая/CourseLibrary/COURSE_PROJECT/CMakeLists.txt">

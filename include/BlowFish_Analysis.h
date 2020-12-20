@@ -74,9 +74,9 @@ void BlowFish_Analysis() {
         search_time = end_time - start_time; // искомое время
         cout << "Time for hacking: " << search_time << " milliseconds (" << search_time / 1000 << " seconds)" << endl;
         cout << "This cipher can't be hacked!" << endl;
-        cout << "                     ----------------------------------------" << endl;
-        cout << "     =========>      |BLOWFISH CIPHER HAS A HIGH RESISTANCE!|      <=========" << endl;
-        cout << "                     ----------------------------------------" << endl;
+        cout << "                     -----------------------------------------------" << endl;
+        cout << "     =========>      |BLOWFISH CIPHER HAS A CALCULATING RESISTANCE!|      <=========" << endl;
+        cout << "                     -----------------------------------------------" << endl;
     }
 }
 

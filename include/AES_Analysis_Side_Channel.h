@@ -86,11 +86,11 @@ void AES_Analysis_Side_Channel() {
         cout << endl;
         std::this_thread::sleep_for(std::chrono::seconds(2));
         cout << "This cipher was hacked! " << endl;
-        cout << "                     -----------------------------------------"
+        cout << "                     ------------------------------------------"
              << endl;
-        cout << "     =========>      |AES CIPHER HAS AN ESTIMATED RESISTANCE!|     "
+        cout << "     =========>      |AES CIPHER HAS A CALCULATING RESISTANCE!|     "
                 " <=========" << endl;
-        cout << "                     -----------------------------------------"
+        cout << "                     ------------------------------------------"
              << endl;
     }
 }
